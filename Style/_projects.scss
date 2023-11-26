@@ -1,0 +1,27 @@
+#project {
+    width: $width;
+    height: 1200px;
+    background: #aba9a9 0% 0% no-repeat padding-box;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .card {
+        height: 280px;
+        margin: 10px;
+    }
+
+    p {
+        text-align: center;
+        font: normal normal normal 20px/29px Heebo;
+        color: var(--colo);
+    }
+}
+
+.btn {
+    @include bTn;
+    width: 250px;
+    height: 30px;
+}

@@ -1,0 +1,11 @@
+.copyRights {
+    display: flex;
+    background: #000;
+    font: normal normal normal 20px/29px Heebo;
+    color: #fff;
+    width: $width;
+    height: 51px;
+    padding: 10px;
+    justify-content: space-between;
+    border: 1px solid var(--bgc);
+}

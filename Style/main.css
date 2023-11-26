@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --colo: #3A3A3A;
+  --bgc: #1fc0e1;
+}
+
+h2 {
+  font: normal normal 900 35px/52px Heebo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--colo);
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--colo);
+}
+
+.scroll-arrow {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+.scroll-arrow:hover {
+  opacity: 1;
+}
+.scroll-arrow .up {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+}
+.scroll-arrow .up:hover {
+  opacity: 0.7;
+}
+
+.navHeader {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  opacity: 1;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.navHeader ul {
+  font: normal normal 500 15px/10px Heebo;
+  list-style-type: none;
+  display: flex;
+  flex-grow: 0.99;
+  margin-bottom: 0;
+  padding-left: 2rem;
+}
+.navHeader ul li a {
+  text-decoration: none;
+  width: 150px;
+  color: #000;
+  display: block;
+  text-align: center;
+  font-size: 1.2em;
+}
+.navHeader ul li a:hover {
+  font-weight: bolder;
+}
+.navHeader img {
+  height: 90%;
+  overflow: hidden;
+}
+
+#hamburger {
+  font-size: 1.2em;
+  color: black;
+  font-weight: bold;
+  padding: 5px;
+  cursor: pointer;
+  display: none;
+}
+#hamburger:hover + ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: 30px;
+  background-color: #333;
+  opacity: 0.5;
+}
+#hamburger:hover + ul li {
+  margin: 0;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: center;
+}
+#hamburger:hover + ul a {
+  color: white;
+  text-decoration: none;
+}
+
+#header-container {
+  background-image: linear-gradient(to bottom, rgba(101, 163, 235, 0.5), rgba(255, 255, 255, 0.5)), url(../TigerImages/colorSpectrum.jpg);
+  height: 28.8125em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#header-container h1 {
+  font: normal normal 900 40px/50px Heebo;
+  word-spacing: 0;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 55%;
+}
+
+.text-container > p {
+  font: normal normal 500 20px/30px Heebo;
+  text-align: center;
+}
+
+.techUsed {
+  height: 146px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.techUsed img {
+  height: 100px;
+  width: 10%;
+  border-radius: 50%;
+}
+.techUsed img:hover {
+  transform: rotate(1turn);
+  transition: all 1.5s ease-in-out;
+}
+
+#aboutMe {
+  display: flex;
+  justify-content: center;
+  align-items: first baseline;
+  width: 100%;
+  height: 750px;
+  background-color: rgba(245, 200, 238, 0.6);
+  padding: 50px;
+}
+#aboutMe figcaption {
+  font: normal normal normal 20px/29px Heebo;
+}
+#aboutMe figure {
+  width: 798px;
+  height: 232px;
+  text-align: center;
+}
+#aboutMe figure .aboutMeimg {
+  width: 20%;
+  height: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+#aboutMe figure .aboutMeimg:hover {
+  transform: scale(2);
+  transition: all 1.5s ease-in-out;
+  cursor: pointer;
+}
+
+.btn1 {
+  border-radius: 25px;
+  text-decoration: none;
+  line-height: 1;
+  opacity: 1;
+  background-color: var(--bgc);
+  width: 260px;
+  height: 41px;
+  margin: 19px;
+}
+
+#project {
+  width: 100%;
+  height: 1200px;
+  background: #aba9a9 0% 0% no-repeat padding-box;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#project .card {
+  height: 280px;
+  margin: 10px;
+}
+#project p {
+  text-align: center;
+  font: normal normal normal 20px/29px Heebo;
+  color: var(--colo);
+}
+
+.btn {
+  border-radius: 25px;
+  text-decoration: none;
+  line-height: 1;
+  opacity: 1;
+  background-color: var(--bgc);
+  width: 250px;
+  height: 30px;
+}
+
+:root {
+  --formwidth: 90%;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 900px;
+  background-color: var(--colo);
+  background-repeat: no-repeat;
+  margin: 0;
+}
+footer h3 {
+  width: 200px;
+  height: 53px;
+  text-align: left;
+  font: normal normal 900 36px/53px Heebo;
+  color: #fff;
+  font-size: 2.25em;
+}
+footer img {
+  width: 10%;
+  height: 20%;
+}
+footer form {
+  display: block;
+  margin-left: 200px;
+  width: 50%;
+  padding: 30px;
+}
+footer form input[type=text] {
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 1em;
+  color: var(--colo);
+  height: 6vh;
+  width: var(--formwidth);
+  border-bottom: 2px solid var(--bgc);
+}
+footer form textarea {
+  width: var(--formwidth);
+  height: 180px;
+  resize: none;
+  border-bottom: 2px solid var(--bgc);
+}
+footer form input[type=submit] {
+  width: var(--formwidth);
+  height: 50px;
+  background-color: var(--bgc);
+  border-radius: 25px;
+}
+footer form label {
+  font-size: 1em;
+  color: #fff;
+  text-align: left;
+  opacity: 1;
+  display: block;
+}
+
+.contactMethods {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 200.33px;
+  background-color: var(--bgc);
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+.contactMethods img {
+  max-width: 100%;
+  height: auto;
+}
+.contactMethods figcaption {
+  padding: 10px;
+}
+.contactMethods figcaption:hover {
+  transform: scale(1.5);
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+
+.copyRights {
+  display: flex;
+  background: #000;
+  font: normal normal normal 20px/29px Heebo;
+  color: #fff;
+  width: 100%;
+  height: 51px;
+  padding: 10px;
+  justify-content: space-between;
+  border: 1px solid var(--bgc);
+}
+
+@media (max-width: 800px) {
+  .navHeader {
+    width: 100%;
+    display: flex;
+    height: 30px;
+    overflow: visible;
+  }
+  .navHeader #hamburger {
+    display: block;
+    z-index: 999;
+    flex-grow: 0.99;
+  }
+  .navHeader #hamburger:hover {
+    display: block;
+  }
+  .navHeader ul {
+    display: none;
+  }
+  .navHeader .navPhoto {
+    display: none;
+  }
+  #header-container h1 {
+    font: normal normal 900 30px/40px Heebo;
+    word-spacing: 0;
+  }
+  .text-container > p {
+    font: normal normal 500 15px/30px Heebo;
+    text-align: center;
+  }
+  #project {
+    height: 2050px;
+  }
+  #project .row {
+    padding-left: 10%;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer form,
+  footer form h3 {
+    margin-left: 1px;
+    text-align: center;
+    width: 100%;
+  }
+  .contactMethods {
+    height: 400px;
+  }
+}/*# sourceMappingURL=main.css.map */

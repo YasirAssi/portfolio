@@ -1,0 +1,72 @@
+.navHeader {
+    width: $width;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    opacity: 1;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+
+    ul {
+        font: normal normal 500 15px/10px Heebo;
+        list-style-type: none;
+        display: flex;
+        flex-grow: 0.99;
+        margin-bottom: 0;
+        padding-left: 2rem;
+
+
+        li a {
+            text-decoration: none;
+            width: 150px;
+            color: #000;
+            display: block;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        li a:hover {
+            font-weight: bolder;
+        }
+    }
+
+    img {
+        height: 90%;
+        overflow: hidden;
+    }
+}
+
+#hamburger {
+    font-size: 1.2em;
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+
+    &:hover+ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        top: 30px;
+        background-color: #333;
+        opacity: 0.5;
+    }
+
+    &:hover+ul li {
+        margin: 0;
+        padding: 10px 20px;
+        width: $width;
+        text-align: center;
+    }
+
+    &:hover+ul a {
+        color: white;
+        text-decoration: none;
+    }
+}

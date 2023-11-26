@@ -1,0 +1,26 @@
+.contactMethods {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 200.33px;
+    background-color: var(--bgc);
+    width: $width;
+    text-align: center;
+    padding: 10px;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    figcaption {
+        padding: 10px;
+
+        &:hover {
+            transform: scale(1.5);
+            transition: all 1s ease-in-out;
+            cursor: pointer;
+        }
+    }
+}

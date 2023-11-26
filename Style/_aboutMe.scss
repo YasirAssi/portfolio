@@ -1,0 +1,39 @@
+#aboutMe {
+    display: flex;
+    justify-content: center;
+    align-items: first baseline;
+    width: $width;
+    height: 750px;
+    background-color: rgba(245, 200, 238, 0.6);
+    padding: 50px;
+
+    figcaption {
+        font: normal normal normal 20px/29px Heebo;
+    }
+
+    figure {
+        width: 798px;
+        height: 232px;
+        text-align: center;
+
+        .aboutMeimg {
+            width: 20%;
+            height: 50%;
+            object-fit: cover;
+            border-radius: 50%;
+
+            &:hover {
+                transform: scale(2);
+                transition: all 1.5s ease-in-out;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.btn1 {
+    @include bTn;
+    width: 260px;
+    height: 41px;
+    margin: 19px;
+}

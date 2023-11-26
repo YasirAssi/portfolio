@@ -1,0 +1,19 @@
+.techUsed {
+    height: 146px;
+    width: $width;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    img {
+        height: 100px;
+        width: 10%;
+        border-radius: 50%;
+
+        &:hover {
+            transform: rotate(1turn);
+            transition: all 1.5s ease-in-out;
+        }
+    }
+}

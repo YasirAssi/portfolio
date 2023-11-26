@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --colo: #3A3A3A;
+    --bgc: #1fc0e1;
+}
+
+$width: 100%;
+
+
+h2 {
+    font: normal normal 900 35px/52px Heebo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--colo);
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--colo);
+}
+
+@mixin bTn {
+    border-radius: 25px;
+    text-decoration: none;
+    line-height: 1;
+    opacity: 1;
+    background-color: var(--bgc);
+}
+
+.scroll-arrow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    .up {
+        width: 40px;
+        height: auto;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}

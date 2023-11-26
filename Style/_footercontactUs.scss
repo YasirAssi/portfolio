@@ -1,0 +1,67 @@
+:root {
+    --formwidth: 90%;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    width: $width;
+    height: 900px;
+    background-color: var(--colo);
+    background-repeat: no-repeat;
+    margin: 0;
+
+    h3 {
+        width: 200px;
+        height: 53px;
+        text-align: left;
+        font: normal normal 900 36px/53px Heebo;
+        color: #fff;
+        font-size: 2.25em;
+    }
+
+    img {
+        width: 10%;
+        height: 20%;
+
+    }
+
+    form {
+        display: block;
+        margin-left: 200px;
+        width: 50%;
+        padding: 30px;
+
+        input[type="text"] {
+            padding: 10px;
+            margin: 5px 0;
+            font-size: 1em;
+            color: var(--colo);
+            height: 6vh;
+            width: var(--formwidth);
+            border-bottom: 2px solid var(--bgc);
+        }
+
+        textarea {
+            width: var(--formwidth);
+            height: 180px;
+            resize: none;
+            border-bottom: 2px solid var(--bgc);
+        }
+
+        input[type="submit"] {
+            width: var(--formwidth);
+            height: 50px;
+            background-color: var(--bgc);
+            border-radius: 25px;
+        }
+
+        label {
+            font-size: 1em;
+            color: #fff;
+            text-align: left;
+            opacity: 1;
+            display: block;
+        }
+    }
+}

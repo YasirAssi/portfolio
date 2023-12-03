@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 40vw;
+    text-align: center;
+    margin: 10% auto;
+    font-family: serif;
+    border: 1px solid #000;
+    padding: 20px;
+}
+
+#sum {
+    width: 60px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #000;
+    text-align: center;
+}
+
+input,
+button {
+    margin: 10px;
+}
+
+#op {
+    font-size: 1rem;
+}

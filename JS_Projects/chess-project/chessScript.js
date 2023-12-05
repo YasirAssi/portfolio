@@ -1,0 +1,149 @@
+import { king, queen, rook, bishop, knight, pawn } from "./chessPieces.js";
+
+const gameborad = document.getElementById('gameboard');
+const playerDisplay = document.getElementById('player');
+const infoDisplay = document.getElementById('info-display');
+const width = 8;
+let playerGo = 'whitePiece';
+playerDisplay.textContent = 'white';
+
+const startPieces = [
+    rook, knight, bishop, queen, king, bishop, knight, rook,
+    pawn, pawn, pawn, pawn, pawn, pawn, pawn, pawn, 
+    '', '', '', '', '', '', '', '', 
+    '', '', '', '', '', '', '', '', 
+    '', '', '', '', '', '', '', '', 
+    '', '', '', '', '', '', '', '', 
+    pawn, pawn, pawn, pawn, pawn, pawn, pawn, pawn,
+    rook, knight, bishop, king, queen, bishop, knight, rook
+];
+
+let creatBoard = () => {
+    startPieces.forEach((startPiece, i) => {
+        const square = document.createElement('div');
+        square.className = 'square';
+        square.innerHTML = startPiece;
+        square.firstChild?.setAttribute('draggable', true);
+        square.setAttribute('square-id', i);
+
+        const row = Math.floor((63 - i) / 8) + 1;
+        if(row % 2 === 0){
+            square.classList.add(i % 2 === 0 ? 'beige': 'brown');
+        } else {
+            square.classList.add(i % 2 === 0 ? 'brown' : 'beige');
+        }
+
+        if (i <= 15) {
+
+            square.firstChild.firstChild.className += ' blackPiece';
+        }
+
+        if (i >= 48) {
+          
+            square.firstChild.firstChild.className += ' whitePiece';
+        }
+        gameborad.appendChild(square);
+    });
+}
+creatBoard();
+
+const allSquares = document.querySelectorAll('.square');
+
+allSquares.forEach(square => {
+    square.addEventListener('dragstart', dragStart);
+    square.addEventListener('dragover', dragOver);
+    square.addEventListener('drop', dragDrop);
+});
+
+let startSquareId;
+let draggedElement;
+
+function dragStart(e) {
+startSquareId = e.target.parentNode.getAttribute('square-id');
+draggedElement = e.target;
+}
+
+function dragOver(e){
+    e.preventDefault();
+}
+
+function dragDrop(e) {
+    e.stopPropagation();
+    const correctGo = draggedElement.className.includes(playerGo);
+    console.log(draggedElement.className);
+    console.log(playerGo);
+    const taken = e.target.classList.contains('piece');
+    const valid = checkIfValid(e.target);
+    const opponentGo = playerGo === 'whitePiece' ? 'blackPiece' : 'whitePiece';
+    const takenByOpponent = true;
+    // e.target.className.includes(opponentGo);
+
+    // the event listener is not working
+
+    if(correctGo){
+        console.log('hi');
+        if(takenByOpponent && valid){
+            e.target.parentNode.append(draggedElement);
+            e.target.remove();
+            changePlayer();
+            return;
+        }
+        if(taken && !takenByOpponent){
+            infoDisplay.textContent = 'wrong move!'
+            setTimeout(() => infoDisplay.textContent = '', 2000);
+            // return;
+        }
+        if (valid){
+            e.target.append(draggedElement);
+            console.log(draggedElement);
+            console.log(e.target);
+            changePlayer();
+            return;
+        }
+    }
+}
+
+let checkIfValid = (target) => {
+    const targetId = +target.getAttribute('square-id') || +target.parentNode.getAttribute('square-id');
+    const startId = +startSquareId;
+    const piece = draggedElement.id;
+
+    console.log(targetId);
+    console.log(startId);
+    console.log(piece);
+
+    switch(piece) {
+        case 'pawn' : 
+        const starterRow = [8, 9, 10, 11, 12 , 13, 14, 15];
+            if(
+                starterRow.includes(startId) && startId + width * 2 === targetId ||
+                startId + width === targetId ||
+                startId + width - 1 === targetId && document.querySelector(`[square-id ="${startId + width - 1}"]`).firstChild ||
+                startId + width + 1 === targetId && document.querySelector(`[square-id ="${startId + width + 1}"]`).firstChild 
+            ){
+                return true;
+            }
+            break;
+    }
+}
+
+let changePlayer = () => {
+    if(playerGo === 'whitePiece'){
+        reverseIds();
+        playerGo = 'blackPiece';
+        playerDisplay.textContent = 'black';
+    } else {
+        revertIds();
+        playerGo = 'whitePiece';
+        playerDisplay.textContent = 'white';
+    }
+}
+
+let reverseIds = () => {
+    const allSquares = document.querySelectorAll('.square');
+    allSquares.forEach((square, i) => square.setAttribute('square-id', (width * width - 1) - i));
+}
+
+let revertIds = () => {
+    allSquares.forEach((square, i) => square.setAttribute('square-id', i));
+} 

@@ -1,6 +1,8 @@
-import { king, queen, rook, bishop, knight, pawn } from "./chessPieces.js";
+import { king, queen, rook, bishop, knight, pawn } from "./Pieces/chessPieces.js";
+// import { changePlayer, reverseIds, revertIds } from "./Pieces/drop&drag.js";
+// import { checkIfValid } from "./Pieces/validCheck.js";
 
-const gameborad = document.getElementById('gameboard');
+const gameboard = document.getElementById('gameboard');
 const playerDisplay = document.getElementById('player');
 const infoDisplay = document.getElementById('info-display');
 const width = 8;
@@ -40,7 +42,7 @@ let creatBoard = () => {
         if (i >= 48) {
             square.firstChild.classList.add('blackPiece');
         }
-        gameborad.appendChild(square);
+        gameboard.appendChild(square);
     });
 }
 creatBoard();
@@ -141,3 +143,4 @@ let revertIds = () => {
     allSquares.forEach((square, i) => square.setAttribute('square-id', i));
 } 
 
+// export { width, infoDisplay, playerDisplay, creatBoard };

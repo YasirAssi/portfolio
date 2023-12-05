@@ -4,7 +4,7 @@ const gameborad = document.getElementById('gameboard');
 const playerDisplay = document.getElementById('player');
 const infoDisplay = document.getElementById('info-display');
 const width = 8;
-let playerGo = 'whitePiece';
+let playerGo = 'white Piece';
 playerDisplay.textContent = 'white';
 
 const startPieces = [
@@ -34,13 +34,11 @@ let creatBoard = () => {
         }
 
         if (i <= 15) {
-
-            square.firstChild.firstChild.className += ' blackPiece';
+            square.firstChild.classList.add('whitePiece');
         }
 
         if (i >= 48) {
-          
-            square.firstChild.firstChild.className += ' whitePiece';
+            square.firstChild.classList.add('blackPiece');
         }
         gameborad.appendChild(square);
     });
@@ -60,6 +58,7 @@ let draggedElement;
 
 function dragStart(e) {
 startSquareId = e.target.parentNode.getAttribute('square-id');
+console.log(startSquareId);
 draggedElement = e.target;
 }
 
@@ -69,14 +68,14 @@ function dragOver(e){
 
 function dragDrop(e) {
     e.stopPropagation();
-    const correctGo = draggedElement.className.includes(playerGo);
-    console.log(draggedElement.className);
-    console.log(playerGo);
+    const correctGo = draggedElement.classList;
+    // const correctGo = draggedElement.classList.contains(playerGo);
+    console.log(draggedElement);
+    console.log(correctGo);
     const taken = e.target.classList.contains('piece');
     const valid = checkIfValid(e.target);
     const opponentGo = playerGo === 'whitePiece' ? 'blackPiece' : 'whitePiece';
-    const takenByOpponent = true;
-    // e.target.className.includes(opponentGo);
+    const takenByOpponent = e.target.firstChild?.classList.contains(opponentGo);
 
     // the event listener is not working
 
@@ -91,7 +90,7 @@ function dragDrop(e) {
         if(taken && !takenByOpponent){
             infoDisplay.textContent = 'wrong move!'
             setTimeout(() => infoDisplay.textContent = '', 2000);
-            // return;
+            return;
         }
         if (valid){
             e.target.append(draggedElement);
@@ -128,13 +127,13 @@ let checkIfValid = (target) => {
 }
 
 let changePlayer = () => {
-    if(playerGo === 'whitePiece'){
+    if(playerGo === 'white Piece'){
         reverseIds();
-        playerGo = 'blackPiece';
+        playerGo = 'black Piece';
         playerDisplay.textContent = 'black';
     } else {
         revertIds();
-        playerGo = 'whitePiece';
+        playerGo = 'white Piece';
         playerDisplay.textContent = 'white';
     }
 }

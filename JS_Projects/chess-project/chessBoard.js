@@ -10,7 +10,7 @@ let playerGo = 'white';
 playerDisplay.textContent = 'white';
 
 const startPieces = [
-    rook, knight, bishop, king, queen , bishop, knight, rook,
+    rook, knight, bishop, king, queen, bishop, knight, rook,
     pawn, pawn, pawn, pawn, pawn, pawn, pawn, pawn, 
     '', '', '', '', '', '', '', '', 
     '', '', '', '', '', '', '', '', 
@@ -36,11 +36,10 @@ let creatBoard = () => {
         }
 
         if (i <= 15) {
-            square.firstChild.classList.add('whitePiece');
+            square.firstChild.classList.add('white');
         }
-
         if (i >= 48) {
-            square.firstChild.classList.add('blackPiece');
+            square.firstChild.classList.add('black');
         }
         gameboard.appendChild(square);
     });
@@ -69,9 +68,7 @@ function dragOver(e){
 
 function dragDrop(e) {
     e.stopPropagation();
-    const correctGo = draggedElement.classList;
-    console.log(correctGo);
-    // const correctGo = draggedElement.classList.contains(playerGo);
+    const correctGo = draggedElement.classList.contains(playerGo);
     const taken = e.target.classList.contains('piece');
     const valid = checkIfValid(e.target);
     const opponentGo = playerGo === 'whitePiece' ? 'blackPiece' : 'whitePiece';
@@ -80,6 +77,7 @@ function dragDrop(e) {
     if(correctGo){
         if(takenByOpponent && valid){
             e.target.append(draggedElement);
+            console.log(e.target);
             e.target.remove();
             changePlayer();
             return;
@@ -102,19 +100,14 @@ let checkIfValid = (target) => {
     const startId = +startSquareId;
     const piece = draggedElement.id;
 
-    console.log(targetId);
-    console.log(startId);
-    console.log(piece);
-
     switch(piece) {
         case 'pawn' : 
         const starterRow = [8, 9, 10, 11, 12 , 13, 14, 15];
             if(
                 starterRow.includes(startId) && startId + width * 2 === targetId ||
                 startId + width === targetId ||
-                startId + width - 1 === targetId && document.querySelector(`[square-id ="${startId + width - 1}"]`).firstChild ||
-                startId + width * 2 - 1 === targetId && document.querySelector(`[square-id ="${startId + width * 2 - 1}"]`).firstChild ||
-                startId + width + 1 === targetId && document.querySelector(`[square-id ="${startId + width + 1}"]`).firstChild 
+                startId + width - 1 === targetId && document.querySelector(`[square-id ="${startId + width - 1}"]`) ||
+                startId + width + 1 === targetId && document.querySelector(`[square-id ="${startId + width + 1}"]`) 
             ){
                 return true;
             }

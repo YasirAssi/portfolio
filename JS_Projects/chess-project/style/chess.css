@@ -1,3 +1,10 @@
+body{
+    background-color: rgb(97, 234, 115);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 #gameboard{
     width: 320px;
     height: 320px;
@@ -38,10 +45,10 @@ path{
     background-color: brown;
 }
 
-.whitePiece{
+.white{
     fill: rgb(198, 193, 193);
 }
 
-.blackPiece{
+.black{
     fill: rgb(84, 4, 4);
 }

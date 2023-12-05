@@ -10,7 +10,7 @@ let playerGo = 'white';
 playerDisplay.textContent = 'white';
 
 const startPieces = [
-    rook, knight, bishop, queen, king, bishop, knight, rook,
+    rook, knight, bishop, king, queen , bishop, knight, rook,
     pawn, pawn, pawn, pawn, pawn, pawn, pawn, pawn, 
     '', '', '', '', '', '', '', '', 
     '', '', '', '', '', '', '', '', 

@@ -4,7 +4,7 @@ const gameborad = document.getElementById('gameboard');
 const playerDisplay = document.getElementById('player');
 const infoDisplay = document.getElementById('info-display');
 const width = 8;
-let playerGo = 'white Piece';
+let playerGo = 'white';
 playerDisplay.textContent = 'white';
 
 const startPieces = [
@@ -58,7 +58,6 @@ let draggedElement;
 
 function dragStart(e) {
 startSquareId = e.target.parentNode.getAttribute('square-id');
-console.log(startSquareId);
 draggedElement = e.target;
 }
 
@@ -69,20 +68,16 @@ function dragOver(e){
 function dragDrop(e) {
     e.stopPropagation();
     const correctGo = draggedElement.classList;
-    // const correctGo = draggedElement.classList.contains(playerGo);
-    console.log(draggedElement);
     console.log(correctGo);
+    // const correctGo = draggedElement.classList.contains(playerGo);
     const taken = e.target.classList.contains('piece');
     const valid = checkIfValid(e.target);
     const opponentGo = playerGo === 'whitePiece' ? 'blackPiece' : 'whitePiece';
     const takenByOpponent = e.target.firstChild?.classList.contains(opponentGo);
 
-    // the event listener is not working
-
     if(correctGo){
-        console.log('hi');
         if(takenByOpponent && valid){
-            e.target.parentNode.append(draggedElement);
+            e.target.append(draggedElement);
             e.target.remove();
             changePlayer();
             return;
@@ -94,8 +89,6 @@ function dragDrop(e) {
         }
         if (valid){
             e.target.append(draggedElement);
-            console.log(draggedElement);
-            console.log(e.target);
             changePlayer();
             return;
         }
@@ -118,6 +111,7 @@ let checkIfValid = (target) => {
                 starterRow.includes(startId) && startId + width * 2 === targetId ||
                 startId + width === targetId ||
                 startId + width - 1 === targetId && document.querySelector(`[square-id ="${startId + width - 1}"]`).firstChild ||
+                startId + width * 2 - 1 === targetId && document.querySelector(`[square-id ="${startId + width * 2 - 1}"]`).firstChild ||
                 startId + width + 1 === targetId && document.querySelector(`[square-id ="${startId + width + 1}"]`).firstChild 
             ){
                 return true;
@@ -127,13 +121,13 @@ let checkIfValid = (target) => {
 }
 
 let changePlayer = () => {
-    if(playerGo === 'white Piece'){
+    if(playerGo === 'white'){
         reverseIds();
-        playerGo = 'black Piece';
+        playerGo = 'black';
         playerDisplay.textContent = 'black';
     } else {
         revertIds();
-        playerGo = 'white Piece';
+        playerGo = 'white';
         playerDisplay.textContent = 'white';
     }
 }
@@ -146,3 +140,4 @@ let reverseIds = () => {
 let revertIds = () => {
     allSquares.forEach((square, i) => square.setAttribute('square-id', i));
 } 
+

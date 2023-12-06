@@ -5,8 +5,8 @@ const num1 = document.getElementById('num1');
 const num2 = document.getElementById('num2');
 const message = document.getElementById('message');
 
-// check.addEventListener('click', () => checkAnswer());
-// next.addEventListener('click', () => resetPage());
+check.addEventListener('click', () => checkAnswer());
+next.addEventListener('click', () => resetPage());
 
 function getNumbers() {
     return Math.floor(Math.random() * 10 + 1);
@@ -23,9 +23,6 @@ function checkAnswer() {
     }
 }
 
-check.addEventListener('click', () => checkAnswer());
-next.addEventListener('click', () => resetPage());
-
 function resetPage() {
     num1.innerHTML = getNumbers();
     num2.innerHTML = getNumbers();
@@ -33,3 +30,4 @@ function resetPage() {
     message.innerHTML = '';
 }
 resetPage();
+

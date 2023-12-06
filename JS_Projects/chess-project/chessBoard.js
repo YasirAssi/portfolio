@@ -71,10 +71,11 @@ function dragDrop(e) {
     const taken = e.target.classList.contains('piece');
     const valid = checkIfValid(e.target);
     const opponentGo = playerGo === 'white' ? 'black' : 'white';
-    const takenByOpponent = e.target.firstElementChild?.classList.contains(opponentGo);
+    const takenByOpponent = e.target.classList.contains(opponentGo);
     // for some reason its not reading the firs child of square(e.target) 
-    console.log(e);
+    console.log(e.target);
     console.log(takenByOpponent);
+    console.log(taken);
 
     if(correctGo){
         if(takenByOpponent && valid){
@@ -83,7 +84,7 @@ function dragDrop(e) {
             changePlayer();
             return;
         }
-        else if(taken && !takenByOpponent){
+        if(taken && !takenByOpponent){
             infoDisplay.textContent = 'wrong move!'
             setTimeout(() => infoDisplay.textContent = '', 2000);
             return;

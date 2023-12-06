@@ -1,13 +1,7 @@
 import Action from "./classes/action.js";
 import ActionManager from "./classes/ActionManager.js";
 
-let salary = new Action("income", "November Salary", 10000);
-console.log(salary);
-let supermarket= new Action("expense", "Supermarket", 600);
-console.log(supermarket);
-
 let manager = new ActionManager(); 
-console.log(manager.actions);
 
 window.addActionToManager = () => { 
 let type = document.getElementById('type').value;

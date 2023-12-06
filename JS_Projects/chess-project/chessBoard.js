@@ -21,7 +21,7 @@ const startPieces = [
 let creatBoard = () => {
     startPieces.forEach((startPiece, i) => {
         const square = document.createElement('div');
-        square.className = 'square';
+        square.classList.add('square');
         square.innerHTML = startPiece;
         square.firstChild?.setAttribute('draggable', true);
         square.setAttribute('square-id', i);
@@ -34,10 +34,10 @@ let creatBoard = () => {
         }
 
         if (i <= 15) {
-            square.firstChild.classList.add('white');
+            square.firstChild.firstElementChild.classList.add('white');
         }
         if (i >= 48) {
-            square.firstChild.classList.add('black');
+            square.firstChild.firstElementChild.classList.add('black');
         }
         gameboard.appendChild(square);
     });
@@ -66,11 +66,14 @@ function dragOver(e){
 
 function dragDrop(e) {
     e.stopPropagation();
-    const correctGo = draggedElement.classList.contains(playerGo);
+    const correctGo = draggedElement.firstElementChild.classList.contains(playerGo);
+    console.log(correctGo);
     const taken = e.target.classList.contains('piece');
     const valid = checkIfValid(e.target);
     const opponentGo = playerGo === 'white' ? 'black' : 'white';
-    const takenByOpponent = e.target.classList.contains(opponentGo);
+    const takenByOpponent = e.target.firstElementChild?.classList.contains(opponentGo);
+    // for some reason its not reading the firs child of square(e.target) 
+    console.log(e);
     console.log(takenByOpponent);
 
     if(correctGo){
@@ -103,19 +106,19 @@ let checkIfValid = (target) => {
         const starterRow = [8, 9, 10, 11, 12 , 13, 14, 15];
                 if(
                     starterRow.includes(startId) && startId + width * 2 === targetId 
-                    && !document.querySelector(`[square-id ="${startId + width * 2}"]`).firstChild ||
+                    && !document.querySelector(`[square-id ="${startId + width * 2}"]`).firstElementChild ||
                     startId + width === targetId  
-                    && !document.querySelector(`[square-id ="${startId + width}"]`).firstChild  || 
-                    startId + width - 1 === targetId  && document.querySelector(`[square-id ="${startId + width - 1}"]`).firstChild ||
-                    startId + width + 1 === targetId && document.querySelector(`[square-id ="${startId + width + 1}"]`).firstChild
+                    && !document.querySelector(`[square-id ="${startId + width}"]`).firstElementChild  || 
+                    startId + width - 1 === targetId  && document.querySelector(`[square-id ="${startId + width - 1}"]`).firstElementChild ||
+                    startId + width + 1 === targetId && document.querySelector(`[square-id ="${startId + width + 1}"]`).firstElementChild
                 ){
                     return true;
                 }
                 break;
         case 'knight' :
                 if(
-                    startId + (width * 2 - 1) === targetId ||startId + (width * 2 + 1) ||
-                    startId - (width * 2 - 1) === targetId ||startId - (width * 2 + 1) ||
+                    startId + (width * 2 - 1) === targetId || startId + (width * 2 + 1) === targetId ||
+                    startId - (width * 2 - 1) === targetId || startId - (width * 2 + 1) === targetId ||
                     startId + width - 2 === targetId || startId + width + 2 === targetId ||
                     startId - width - 2 === targetId || startId - width + 2 === targetId 
                 ){
@@ -124,7 +127,7 @@ let checkIfValid = (target) => {
             break;
         case 'bishop' : 
                 if(
-                    startId + width + 1 === targetId || startId + width * 2 + 2 === targetId ||
+                    startId + width + 1 === targetId || startId + width * 2 + 2 && !document.querySelectorAll(`[square-id = "${startId + width + 1}"]`).firstElementChild||
                     startId + width * 3 + 3 === targetId || startId + width * 4 + 4 ===  targetId|| startId + width * 5 + 5 === targetId || startId + width - 1 === targetId || startId + width * 2 - 2 === targetId || startId + width * 3 - 3 === targetId || startId + width * 4 - 4 === targetId || startId + width * 4 - 5 === targetId ||
                     startId - width + 1 === targetId || startId - width * 2 + 2 === targetId ||
                     startId - width * 3 + 3 === targetId || startId - width * 4 + 4 === targetId|| startId - width * 5 + 5 === targetId || startId - width - 1 === targetId || startId - width * 2 - 2 === targetId || startId - width * 3 - 3 === targetId || startId - width * 4 - 4 === targetId || startId - width * 4 - 5 === targetId

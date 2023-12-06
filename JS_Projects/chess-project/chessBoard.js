@@ -71,13 +71,13 @@ function dragDrop(e) {
     const correctGo = draggedElement.classList.contains(playerGo);
     const taken = e.target.classList.contains('piece');
     const valid = checkIfValid(e.target);
-    const opponentGo = playerGo === 'whitePiece' ? 'blackPiece' : 'whitePiece';
-    const takenByOpponent = e.target.firstChild?.classList.contains(opponentGo);
+    const opponentGo = playerGo === 'white' ? 'black' : 'white';
+    const takenByOpponent = e.target.classList.contains(opponentGo);
+    console.log(takenByOpponent);
 
     if(correctGo){
         if(takenByOpponent && valid){
             e.target.append(draggedElement);
-            console.log(e.target);
             e.target.remove();
             changePlayer();
             return;
@@ -91,7 +91,7 @@ function dragDrop(e) {
             e.target.append(draggedElement);
             changePlayer();
             return;
-        }
+        } 
     }
 }
 
@@ -106,13 +106,62 @@ let checkIfValid = (target) => {
             if(
                 starterRow.includes(startId) && startId + width * 2 === targetId ||
                 startId + width === targetId ||
-                startId + width - 1 === targetId && document.querySelector(`[square-id ="${startId + width - 1}"]`) ||
-                startId + width + 1 === targetId && document.querySelector(`[square-id ="${startId + width + 1}"]`) 
+                startId + width - 1 === targetId && document.querySelector(`[square-id ="${startId + width - 1}"]`).firstChild ||
+                startId + width + 1 === targetId && document.querySelector(`[square-id ="${startId + width + 1}"]`).firstChild 
             ){
                 return true;
             }
             break;
+            case 'knight' :
+                if(
+                    startId + (width * 2 - 1) === targetId ||startId + (width * 2 + 1) ||
+                    startId - (width * 2 - 1) === targetId ||startId - (width * 2 + 1) ||
+                    startId + width - 2 === targetId || startId + width + 2 === targetId ||
+                    startId - width - 2 === targetId || startId - width + 2 === targetId 
+                ){
+                    return true;
+                }
+                break;
+                case 'bishop' : 
+                if(
+                    startId + width + 1 === targetId || startId + width * 2 + 2 === targetId ||
+                    startId + width * 3 + 3 === targetId || startId + width * 4 + 4 === targetId|| startId + width * 5 + 5 === targetId || startId + width - 1 === targetId || startId + width * 2 - 2 === targetId || startId + width * 3 - 3 === targetId || startId + width * 4 - 4 === targetId || startId + width * 4 - 5 === targetId ||
+                    startId - width + 1 === targetId || startId - width * 2 + 2 === targetId ||
+                    startId - width * 3 + 3 === targetId || startId - width * 4 + 4 === targetId|| startId - width * 5 + 5 === targetId || startId - width - 1 === targetId || startId - width * 2 - 2 === targetId || startId - width * 3 - 3 === targetId || startId - width * 4 - 4 === targetId || startId - width * 4 - 5 === targetId
+                ){
+                    return true;
+                }
+                break;
+                case 'rook':
+                    if(
+                        startId + 1 === targetId || startId + 2 === targetId || startId + 3 === targetId || startId + 4 === targetId || startId + 5 === targetId || startId + 6 === targetId || startId + 7 === targetId ||
+                        startId - 1 === targetId || startId - 2 === targetId || startId - 3 === targetId || startId - 4 === targetId || startId - 5 === targetId || startId - 6 === targetId || startId - 7 === targetId ||
+                        startId + width === targetId || startId + width * 2 === targetId || startId + width * 3 === targetId || startId + width * 4 === targetId || startId + width * 5 === targetId || startId + width * 6 === targetId || startId + width * 7 === targetId ||
+                        startId - width === targetId || startId - width * 2 === targetId || startId - width * 3 === targetId || startId - width * 4 === targetId || startId - width * 5 === targetId || startId - width * 6 === targetId || startId - width * 7 === targetId
+                    ){
+                        return true;
+                    }
+                        break;
+                    case 'king' :
+                    if(
+                        startId + 1 === targetId || startId - 1 === targetId || startId +width === targetId || startId - width === targetId || startId +width + 1 === targetId || startId + width - 1 === targetId ||startId - width + 1 === targetId || startId - width - 1 ===targetId
+                    ){
+                        return true;
+                    }
+                        break;
+                    case 'queen' :
+                            if(
+                            startId + 1 === targetId || startId + 2 === targetId ||startId + 3 === targetId || startId + 4 === targetId ||startId + 5 === targetId || startId + 6 === targetId ||startId + 7 === targetId ||
+                            startId - 1 === targetId || startId - 2 === targetId || startId - 3 === targetId || startId - 4 === targetId || startId - 5 === targetId || startId - 6 === targetId || startId - 7 === targetId ||
+                            startId + width === targetId || startId + width * 2 === targetId || startId + width * 3 === targetId || startId + width * 4 === targetId || startId + width * 5 === targetId || startId + width * 6 === targetId || startId + width * 7 === targetId ||
+                            startId - width === targetId || startId - width * 2 === targetId || startId - width * 3 === targetId || startId - width * 4 === targetId || startId - width * 5 === targetId || startId - width * 6 === targetId || startId - width * 7 === targetId || startId + width + 1 === targetId || startId + width * 2 + 2 === targetId ||
+                            startId + width * 3 + 3 === targetId || startId + width * 4 + 4 ===     targetId|| startId + width * 5 + 5 === targetId || startId + width - 1  === targetId || startId + width * 2 - 2 === targetId || startId +    width * 3 - 3 === targetId || startId + width * 4 - 4 === targetId ||  startId + width * 4 - 5 === targetId || startId - width + 1 === targetId || startId - width * 2 + 2 === targetId || startId - width * 3 + 3 === targetId || startId - width * 4 + 4 ===     targetId|| startId - width * 5 + 5 === targetId || startId - width - 1  === targetId || startId - width * 2 - 2 === targetId || startId -    width * 3 - 3 === targetId || startId - width * 4 - 4 === targetId ||  startId - width * 4 - 5 === targetId
+                            ){
+                                return true;
+                            }
+                            break;
     }
+
 }
 
 let changePlayer = () => {

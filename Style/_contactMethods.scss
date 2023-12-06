@@ -3,18 +3,19 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    height: 200.33px;
+    height: 20%;
     background-color: var(--bgc);
     width: $width;
     text-align: center;
     padding: 10px;
 
     img {
-        max-width: 100%;
+        max-width: 30%;
         height: auto;
     }
 
     figcaption {
+        margin: 5px;
         padding: 10px;
 
         &:hover {

@@ -1,16 +1,32 @@
-#project {
+#Cssproject {
     width: $width;
-    height: 1200px;
+    height: 30%;
     background: #aba9a9 0% 0% no-repeat padding-box;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    padding: 10px;
 
     .card {
         height: 280px;
         margin: 10px;
+    }
+
+    p {
+        text-align: center;
+        font: normal normal normal 20px/29px Heebo;
+        color: var(--colo);
+    }
+}
+#JavaSproject {
+    width: $width;
+    height: 30%;
+    background: #e4a0a0 0% 0% no-repeat padding-box;
+    margin: 0;
+    padding: 10px;
+
+    .card {
+        height: 280px;
+        margin: 10px;
+        background-color: rgb(83, 81, 81);
     }
 
     p {
@@ -24,4 +40,9 @@
     @include bTn;
     width: 250px;
     height: 30px;
+}
+
+img{
+    height: 150px;
+    width: 150px;
 }

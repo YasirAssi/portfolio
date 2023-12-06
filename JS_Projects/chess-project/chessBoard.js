@@ -1,6 +1,4 @@
 import { king, queen, rook, bishop, knight, pawn } from "./Pieces/chessPieces.js";
-// import { changePlayer, reverseIds, revertIds } from "./Pieces/drop&drag.js";
-// import { checkIfValid } from "./Pieces/validCheck.js";
 
 const gameboard = document.getElementById('gameboard');
 const playerDisplay = document.getElementById('player');
@@ -82,7 +80,7 @@ function dragDrop(e) {
             changePlayer();
             return;
         }
-        if(taken && !takenByOpponent){
+        else if(taken && !takenByOpponent){
             infoDisplay.textContent = 'wrong move!'
             setTimeout(() => infoDisplay.textContent = '', 2000);
             return;
@@ -103,16 +101,18 @@ let checkIfValid = (target) => {
     switch(piece) {
         case 'pawn' : 
         const starterRow = [8, 9, 10, 11, 12 , 13, 14, 15];
-            if(
-                starterRow.includes(startId) && startId + width * 2 === targetId ||
-                startId + width === targetId ||
-                startId + width - 1 === targetId && document.querySelector(`[square-id ="${startId + width - 1}"]`).firstChild ||
-                startId + width + 1 === targetId && document.querySelector(`[square-id ="${startId + width + 1}"]`).firstChild 
-            ){
-                return true;
-            }
-            break;
-            case 'knight' :
+                if(
+                    starterRow.includes(startId) && startId + width * 2 === targetId 
+                    && !document.querySelector(`[square-id ="${startId + width * 2}"]`).firstChild ||
+                    startId + width === targetId  
+                    && !document.querySelector(`[square-id ="${startId + width}"]`).firstChild  || 
+                    startId + width - 1 === targetId  && document.querySelector(`[square-id ="${startId + width - 1}"]`).firstChild ||
+                    startId + width + 1 === targetId && document.querySelector(`[square-id ="${startId + width + 1}"]`).firstChild
+                ){
+                    return true;
+                }
+                break;
+        case 'knight' :
                 if(
                     startId + (width * 2 - 1) === targetId ||startId + (width * 2 + 1) ||
                     startId - (width * 2 - 1) === targetId ||startId - (width * 2 + 1) ||
@@ -121,47 +121,47 @@ let checkIfValid = (target) => {
                 ){
                     return true;
                 }
-                break;
-                case 'bishop' : 
+            break;
+        case 'bishop' : 
                 if(
                     startId + width + 1 === targetId || startId + width * 2 + 2 === targetId ||
-                    startId + width * 3 + 3 === targetId || startId + width * 4 + 4 === targetId|| startId + width * 5 + 5 === targetId || startId + width - 1 === targetId || startId + width * 2 - 2 === targetId || startId + width * 3 - 3 === targetId || startId + width * 4 - 4 === targetId || startId + width * 4 - 5 === targetId ||
+                    startId + width * 3 + 3 === targetId || startId + width * 4 + 4 ===  targetId|| startId + width * 5 + 5 === targetId || startId + width - 1 === targetId || startId + width * 2 - 2 === targetId || startId + width * 3 - 3 === targetId || startId + width * 4 - 4 === targetId || startId + width * 4 - 5 === targetId ||
                     startId - width + 1 === targetId || startId - width * 2 + 2 === targetId ||
                     startId - width * 3 + 3 === targetId || startId - width * 4 + 4 === targetId|| startId - width * 5 + 5 === targetId || startId - width - 1 === targetId || startId - width * 2 - 2 === targetId || startId - width * 3 - 3 === targetId || startId - width * 4 - 4 === targetId || startId - width * 4 - 5 === targetId
                 ){
                     return true;
                 }
                 break;
-                case 'rook':
+        case 'rook':
+                if(
+                    startId + 1 === targetId || startId + 2 === targetId || startId + 3 === targetId || startId + 4 === targetId || startId + 5 === targetId || startId + 6 === targetId || startId + 7 === targetId ||
+                    startId - 1 === targetId || startId - 2 === targetId || startId - 3 === targetId || startId - 4 === targetId || startId - 5 === targetId || startId - 6 === targetId || startId - 7 === targetId ||
+                    startId + width === targetId || startId + width * 2 === targetId || startId + width * 3 === targetId || startId + width * 4 === targetId || startId + width * 5 === targetId || startId + width * 6 === targetId || startId + width * 7 === targetId ||
+                    startId - width === targetId || startId - width * 2 === targetId || startId - width * 3 === targetId || startId - width * 4 === targetId || startId - width * 5 === targetId || startId - width * 6 === targetId || startId - width * 7 === targetId
+                ){
+                    return true;
+                }
+                break;
+                        // the queen moves like the (rook and bishop compined togather)
+            case 'queen' :
                     if(
-                        startId + 1 === targetId || startId + 2 === targetId || startId + 3 === targetId || startId + 4 === targetId || startId + 5 === targetId || startId + 6 === targetId || startId + 7 === targetId ||
+                        startId + 1 === targetId || startId + 2 === targetId ||startId + 3 === targetId || startId + 4 === targetId ||startId + 5 === targetId || startId + 6 === targetId ||startId + 7 === targetId ||
                         startId - 1 === targetId || startId - 2 === targetId || startId - 3 === targetId || startId - 4 === targetId || startId - 5 === targetId || startId - 6 === targetId || startId - 7 === targetId ||
                         startId + width === targetId || startId + width * 2 === targetId || startId + width * 3 === targetId || startId + width * 4 === targetId || startId + width * 5 === targetId || startId + width * 6 === targetId || startId + width * 7 === targetId ||
-                        startId - width === targetId || startId - width * 2 === targetId || startId - width * 3 === targetId || startId - width * 4 === targetId || startId - width * 5 === targetId || startId - width * 6 === targetId || startId - width * 7 === targetId
+                        startId - width === targetId || startId - width * 2 === targetId || startId - width * 3 === targetId || startId - width * 4 === targetId || startId - width * 5 === targetId || startId - width * 6 === targetId || startId - width * 7 === targetId || startId + width + 1 === targetId || startId + width * 2 + 2 === targetId ||
+                        startId + width * 3 + 3 === targetId || startId + width * 4 + 4 ===     targetId|| startId + width * 5 + 5 === targetId || startId + width - 1  === targetId || startId + width * 2 - 2 === targetId || startId +    width * 3 - 3 === targetId || startId + width * 4 - 4 === targetId ||  startId + width * 4 - 5 === targetId || startId - width + 1 === targetId || startId - width * 2 + 2 === targetId || startId - width * 3 + 3 === targetId || startId - width * 4 + 4 ===     targetId|| startId - width * 5 + 5 === targetId || startId - width - 1  === targetId || startId - width * 2 - 2 === targetId || startId -    width * 3 - 3 === targetId || startId - width * 4 - 4 === targetId ||  startId - width * 4 - 5 === targetId
                     ){
                         return true;
                     }
-                        break;
-                    case 'king' :
+                    break;
+            case 'king' :
                     if(
                         startId + 1 === targetId || startId - 1 === targetId || startId +width === targetId || startId - width === targetId || startId +width + 1 === targetId || startId + width - 1 === targetId ||startId - width + 1 === targetId || startId - width - 1 ===targetId
-                    ){
+                        ){
                         return true;
                     }
                         break;
-                    case 'queen' :
-                            if(
-                            startId + 1 === targetId || startId + 2 === targetId ||startId + 3 === targetId || startId + 4 === targetId ||startId + 5 === targetId || startId + 6 === targetId ||startId + 7 === targetId ||
-                            startId - 1 === targetId || startId - 2 === targetId || startId - 3 === targetId || startId - 4 === targetId || startId - 5 === targetId || startId - 6 === targetId || startId - 7 === targetId ||
-                            startId + width === targetId || startId + width * 2 === targetId || startId + width * 3 === targetId || startId + width * 4 === targetId || startId + width * 5 === targetId || startId + width * 6 === targetId || startId + width * 7 === targetId ||
-                            startId - width === targetId || startId - width * 2 === targetId || startId - width * 3 === targetId || startId - width * 4 === targetId || startId - width * 5 === targetId || startId - width * 6 === targetId || startId - width * 7 === targetId || startId + width + 1 === targetId || startId + width * 2 + 2 === targetId ||
-                            startId + width * 3 + 3 === targetId || startId + width * 4 + 4 ===     targetId|| startId + width * 5 + 5 === targetId || startId + width - 1  === targetId || startId + width * 2 - 2 === targetId || startId +    width * 3 - 3 === targetId || startId + width * 4 - 4 === targetId ||  startId + width * 4 - 5 === targetId || startId - width + 1 === targetId || startId - width * 2 + 2 === targetId || startId - width * 3 + 3 === targetId || startId - width * 4 + 4 ===     targetId|| startId - width * 5 + 5 === targetId || startId - width - 1  === targetId || startId - width * 2 - 2 === targetId || startId -    width * 3 - 3 === targetId || startId - width * 4 - 4 === targetId ||  startId - width * 4 - 5 === targetId
-                            ){
-                                return true;
-                            }
-                            break;
     }
-
 }
 
 let changePlayer = () => {
@@ -185,4 +185,4 @@ let revertIds = () => {
     allSquares.forEach((square, i) => square.setAttribute('square-id', i));
 } 
 
-// export { width, infoDisplay, playerDisplay, creatBoard };
+

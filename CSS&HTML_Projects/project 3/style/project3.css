@@ -12,9 +12,15 @@
 
 body {
     background-color: #E5EEFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
+    width: 70%;
+    height:70%;
+    padding: 40px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);

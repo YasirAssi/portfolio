@@ -4,17 +4,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F9F9F9;
+    background-color: #716e6e;
 }
 
-section {
+#container {
     background-image: linear-gradient(to bottom, #281EFF, #2DFF8C);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100vw;
+    height: 85vh;
+    width: 85vw;
+    margin: 60px;
 }
 
 h1,
@@ -27,19 +28,19 @@ p,
     margin: 10px;
 }
 
-section h1 {
+#container h1 {
     font: normal normal normal 160px/231px Satisfy;
 }
 
-section h2 {
+#container h2 {
     font: normal normal normal 32px/38px Varela Round;
 }
 
-section h2 p {
+#container h2 p {
     font: normal normal normal 16px/20px Varela Round;
 }
 
-section .form {
+#container .form {
     width: 100%;
     display: flex;
     justify-content: center;

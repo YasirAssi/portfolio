@@ -75,8 +75,13 @@ a {
 .navHeader ul li a:hover {
   font-weight: bolder;
 }
-.navHeader img {
-  height: 90%;
+.navHeader .navPhoto {
+  height: 50%;
+  width: 10%;
+  overflow: hidden;
+}
+.navHeader .navName {
+  height: 50%;
   overflow: hidden;
 }
 
@@ -182,7 +187,7 @@ a {
   .navHeader ul {
     display: none;
   }
-  .navHeader .navPhoto {
+  .navHeader .navName {
     display: none;
   }
   #header-container h1 {

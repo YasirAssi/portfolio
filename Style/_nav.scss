@@ -34,8 +34,13 @@
         }
     }
 
-    img {
-        height: 90%;
+    .navPhoto {
+        height: 50%;
+        width: 10%;
+        overflow: hidden;
+    }
+    .navName {
+        height: 50%;
         overflow: hidden;
     }
 }

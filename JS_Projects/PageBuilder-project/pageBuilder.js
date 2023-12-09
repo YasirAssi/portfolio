@@ -112,6 +112,7 @@ pageBuilderDiv.className = 'pageBuilderDiv';
 
 let pageToBuild = (pageBuilderData) => {
     let newElement = document.createElement(pageBuilderData.type || 'div'); 
+    newElement.className = 'newElement';
     newElement.style.backgroundColor = pageBuilderData.color || 'transparent';
     newElement.style.width = pageBuilderData.width || 'auto';
     newElement.style.height = pageBuilderData.height || 'auto';

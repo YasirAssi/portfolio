@@ -107,6 +107,8 @@ let elementCreater = () => {
     
     document.body.querySelector('.pageBuilder').appendChild(div);
 }
+let pageBuilderDiv = document.createElement('div');
+pageBuilderDiv.className = 'pageBuilderDiv';
 
 let pageToBuild = (pageBuilderData) => {
     let newElement = document.createElement(pageBuilderData.type || 'div'); 
@@ -118,11 +120,9 @@ let pageToBuild = (pageBuilderData) => {
     newElement.style.fontSize = pageBuilderData.fontSize || '16px';
     newElement.style.fontFamily = pageBuilderData.fontType || 'Arial';
 
-    newElement.style.position = 'absolute';
-    newElement.style.top = '0';
-    newElement.style.left = '40%';
-
-    document.body.appendChild(newElement);
+    document.body.appendChild(pageBuilderDiv);
+    pageBuilderDiv.appendChild(newElement);
+    pageBuilderDiv.innerHTML += '';
 }
 
 let storage = () => {

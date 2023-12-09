@@ -8,11 +8,13 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-image: url(./pBuilderImages/blocks.jpg);
+    background-image: url(../pBuilderImages/blocks.jpg);
     background-repeat: no-repeat;
     background-position: top left;
     background-size: 40% 100%;
     background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
 }
 
 .pageBuilder{
@@ -20,8 +22,12 @@ html, body {
     height: 100vh;
     padding: 30px;
     font-size: 1em;
-    display: flex;
-    flex-direction: column;
+}
+
+.pageBuilderDiv{
+    position: absolute;
+    top: 0;
+    left: 40%;
 }
 
 header,h1,p {

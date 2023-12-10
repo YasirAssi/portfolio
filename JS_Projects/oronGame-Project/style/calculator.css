@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10% auto;
+    font-family: serif;
+    border: 1px solid #f47424;
+    padding: 20px;
+    box-shadow:5em 1em rgb(225, 204, 126);
+}
+
+h1{
+    font-family:'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva;
+    border: 2px solid  brown;
+    background-color: burlywood;
+}
+
+form{
+    margin: 10px;
+    width: 100%;
+}
+
+form #calc {
+    width: 25%;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #000;
+    text-align: center;
+    margin-right: 10%;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 100%;
+}
+
+#operationSelector {
+    font-size: 1rem;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+footer button{
+    height: 30px;
+    width: 90%;
+    border-radius: 5%;
+    margin:10px;
+}
+
+@keyframes mymove{
+50% {transform: rotate(180deg);}
+}
+
+#num1, #num2{
+    font-size: 40px;
+    width: 40px;
+    border: 2px solid blanchedalmond;
+}

@@ -127,20 +127,19 @@ let pageToBuild = (pageBuilderData) => {
     pageBuilderDiv.innerHTML += '';
 }
 
-const savedPageContent = localStorage.getItem('savedPage');
-if (savedPageContent) pageBuilderDiv.innerHTML = savedPageContent;
-
 let storage = () => {
     const pageContent = pageBuilderDiv.innerHTML;
     localStorage.setItem('savedPage',pageContent);
     alert('Page saved successfully!');
 }
 
+const savedPageContent = localStorage.getItem('savedPage');
+if (savedPageContent) pageBuilderDiv.innerHTML = savedPageContent;
 
 
 elementCreater();
 
-// the problem is that when i refresh the page after saving the page erased, but when i add a new element the element i added earlier showes up again
+
 
 
 

@@ -107,8 +107,10 @@ let elementCreater = () => {
     
     document.body.querySelector('.pageBuilder').appendChild(div);
 }
+
 let pageBuilderDiv = document.createElement('div');
 pageBuilderDiv.className = 'pageBuilderDiv';
+document.body.appendChild(pageBuilderDiv);
 
 let pageToBuild = (pageBuilderData) => {
     let newElement = document.createElement(pageBuilderData.type || 'div'); 
@@ -121,24 +123,25 @@ let pageToBuild = (pageBuilderData) => {
     newElement.style.fontSize = pageBuilderData.fontSize || '16px';
     newElement.style.fontFamily = pageBuilderData.fontType || 'Arial';
 
-    document.body.appendChild(pageBuilderDiv);
     pageBuilderDiv.appendChild(newElement);
     pageBuilderDiv.innerHTML += '';
 }
 
+const savedPageContent = localStorage.getItem('savedPage');
+if (savedPageContent) pageBuilderDiv.innerHTML = savedPageContent;
+
 let storage = () => {
-    const pageContent = document.body.innerHTML;
-    localStorage.setItem('savedPage', pageContent);
+    const pageContent = pageBuilderDiv.innerHTML;
+    localStorage.setItem('savedPage',pageContent);
     alert('Page saved successfully!');
 }
 
-onload = () => {
-    const savedPageContent = localStorage.getItem('savedPage');
-    if (savedPageContent) {
-        document.body.innerHTML = savedPageContent;
-    }
-};
+
 
 elementCreater();
+
+// the problem is that when i refresh the page after saving the page erased, but when i add a new element the element i added earlier showes up again
+
+
 
 

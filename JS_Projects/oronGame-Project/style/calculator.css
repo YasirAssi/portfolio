@@ -15,12 +15,17 @@
     border: 1px solid #f47424;
     padding: 20px;
     box-shadow:5em 1em rgb(225, 204, 126);
+    background-image: url(../../../TigerImages/calcpic.jpg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 50% 80%;
+    background-attachment: fixed;
 }
 
-h1{
+.container h1{
     font-family:'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva;
     border: 2px solid  brown;
-    background-color: burlywood;
+    background-image: linear-gradient(to bottom, rgba(239, 58, 61, 0.5), rgba(221, 169, 86, 0.5)),  url(../../../TigerImages/colorSpectrum.jpg);
 }
 
 form{
@@ -36,14 +41,18 @@ form #calc {
     margin-right: 10%;
 }
 
+form label{
+font-size: 1.5rem;
+}
+
 footer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 10px;
-    width: 100%;
+    width: 50%;
 }
 
 #operationSelector {
@@ -58,6 +67,8 @@ footer button{
     width: 90%;
     border-radius: 5%;
     margin:10px;
+    height: 20%;
+    font-size: 1.5rem;
 }
 
 @keyframes mymove{
@@ -66,6 +77,7 @@ footer button{
 
 #num1, #num2{
     font-size: 40px;
-    width: 40px;
+    width: 5%;
     border: 2px solid blanchedalmond;
+    background-color: #f47424;
 }

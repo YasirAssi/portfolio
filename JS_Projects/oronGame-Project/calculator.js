@@ -38,10 +38,13 @@ function checkAnswer() {
     if (userAnswer === exAnswer) {
         message.innerHTML = 'Good Work! go to next exc.';
         check.style.backgroundColor = 'green';
+        next.style.backgroundColor = 'aqua';
         next.style.animation = 'mymove 2s';
+        calc.style.backgroundColor = 'orange';
     } else {
         message.innerHTML = 'Not a big deal! Try Again!';
         check.style.backgroundColor = 'red';
+        next.style.backgroundColor = 'orange';
         next.textContent = 'Try Another One';
         
     }
@@ -54,7 +57,9 @@ function resetPage() {
     message.innerHTML = '';
     check.style.backgroundColor = '';
     next.style.animation = '';
-    next.textContent = 'Next Exercise'
+    next.style.backgroundColor = '';
+    next.textContent = 'Next Exercise';
+    calc.style.backgroundColor = '';
 }
 resetPage();
 

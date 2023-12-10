@@ -59,7 +59,7 @@ let elementCreater = () => {
     FontTypeInput.className = 'form-control';
 
     const buttonDiv = document.createElement('footer');
-    buttonDiv.className = 'd-grid gap-2 d-md-block';
+    buttonDiv.className = 'd-inline-flex gap-1';
 
     const addButton = document.createElement('button');
     addButton.className = 'btn btn-warning fs-6'; 
@@ -83,9 +83,16 @@ let elementCreater = () => {
     saveButton.textContent = 'Save';
     saveButton.onclick = () => storage();
 
+    
+    const deleteButton = document.createElement('button');
+    deleteButton.className = 'btn btn-danger fs-6'; 
+    deleteButton.textContent = 'delete Element';
+    deleteButton.onclick = () => deleteElement ();
+
     buttonDiv.appendChild(addButton);
     buttonDiv.appendChild(saveButton);
-
+    buttonDiv.appendChild(deleteButton);
+    
 
     div.appendChild(labelOfColor);
     div.appendChild(colorInput);
@@ -127,10 +134,32 @@ let pageToBuild = (pageBuilderData) => {
     pageBuilderDiv.innerHTML += '';
 }
 
+
 let storage = () => {
     const pageContent = pageBuilderDiv.innerHTML;
     localStorage.setItem('savedPage',pageContent);
     alert('Page saved successfully!');
+}
+
+let deleteElement = () => {
+    const pageBuilderDiv = document.querySelector('.pageBuilderDiv');
+    const element = pageBuilderDiv.children;
+
+    if (element.length === 0) {
+        alert('No elements to delete.');
+        return;
+    }
+    
+const indexToDelete = prompt(`Enter the number (1-${element.length}) of the element to delete:`);
+
+    const index = +indexToDelete;
+    if (isNaN(index) || index < 1 || index > element.length) {
+        alert('Invalid input. Please enter a valid number.');
+        return;
+    }
+
+    const elementToDelete = element[index - 1];
+    pageBuilderDiv.removeChild(elementToDelete);
 }
 
 const savedPageContent = localStorage.getItem('savedPage');

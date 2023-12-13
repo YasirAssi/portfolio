@@ -1,0 +1,15 @@
+.techUsed {
+    height: 100%;
+    width: $width;
+    background-color: rgb(232, 229, 229);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+    .card{
+        background-color: rgb(214, 200, 200);
+    }
+}
+
+
+

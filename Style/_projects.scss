@@ -1,7 +1,7 @@
 #Cssproject {
     width: $width;
     height: 30%;
-    background: #aba9a9 0% 0% no-repeat padding-box;
+    background-image: linear-gradient(to bottom, rgba(173, 201, 233, 0.5), rgba(181, 77, 181, 0.5)), url(../TigerImages/colorSpectrum.jpg);
     margin: 0;
     padding: 10px;
 
@@ -19,7 +19,7 @@
 #JavaSproject {
     width: $width;
     height: 30%;
-    background: #e4a0a0 0% 0% no-repeat padding-box;
+    background-image: linear-gradient(to bottom, rgba(234, 174, 43, 0.542), rgba(38, 18, 38, 0.5)), url(../TigerImages/colorSpectrum.jpg);
     margin: 0;
     padding: 10px;
 

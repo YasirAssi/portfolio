@@ -56,25 +56,6 @@ a {
   align-items: center;
   overflow: hidden;
 }
-.navHeader ul {
-  font: normal normal 500 15px/10px Heebo;
-  list-style-type: none;
-  display: flex;
-  flex-grow: 0.99;
-  margin-bottom: 0;
-  padding-left: 2rem;
-}
-.navHeader ul li a {
-  text-decoration: none;
-  width: 150px;
-  color: #000;
-  display: block;
-  text-align: center;
-  font-size: 1.2em;
-}
-.navHeader ul li a:hover {
-  font-weight: bolder;
-}
 .navHeader .navPhoto {
   height: 50%;
   width: 5%;
@@ -92,26 +73,31 @@ a {
   font-weight: bold;
   padding: 5px;
   cursor: pointer;
+  flex-grow: 0.99;
+  display: flex;
+  align-items: center;
+}
+#hamburger #burgerIcon {
   display: none;
 }
-#hamburger:hover + ul {
+#hamburger ul {
+  font: normal normal 500 15px/10px Heebo;
+  list-style-type: none;
   display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 0;
-  top: 30px;
-  background-color: #333;
-  opacity: 0.5;
+  flex-grow: 0.99;
+  margin-bottom: 0;
+  padding-left: 2rem;
 }
-#hamburger:hover + ul li {
-  margin: 0;
-  padding: 10px 20px;
-  width: 100%;
-  text-align: center;
-}
-#hamburger:hover + ul a {
-  color: white;
+#hamburger ul li a {
   text-decoration: none;
+  width: 150px;
+  color: #000;
+  display: block;
+  text-align: center;
+  font-size: 1.2em;
+}
+#hamburger ul li a:hover {
+  font-weight: bolder;
 }
 
 #header-container {
@@ -170,7 +156,7 @@ a {
   height: 100%;
   background-image: linear-gradient(to bottom, rgba(212, 234, 237, 0.542), rgba(38, 18, 38, 0.5)), url(../TigerImages/colorSpectrum.jpg);
   padding: 50px;
-  color: whitesmoke;
+  color: rgb(27, 24, 24);
   margin: 0;
 }
 #aboutMe figure {
@@ -187,7 +173,7 @@ a {
   font-family: "Segoe UI";
 }
 #aboutMe figure .aboutMeimg {
-  width: 25%;
+  width: 30%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -375,15 +361,42 @@ footer form label {
     overflow: visible;
   }
   .navHeader #hamburger {
+    position: relative;
+  }
+  .navHeader #hamburger #burgerIcon {
     display: block;
-    z-index: 999;
-    flex-grow: 0.99;
+  }
+  .navHeader #hamburger:hover ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    background-color: #9a7575;
+    opacity: 1;
+    z-index: 10;
+  }
+  .navHeader #hamburger:hover ul li {
+    margin: 0;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+  }
+  .navHeader #hamburger:hover ul a {
+    color: white;
+    text-decoration: none;
   }
   .navHeader #hamburger:hover {
     display: block;
   }
-  .navHeader ul {
+  .navHeader #hamburger ul {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #9a7575;
+    opacity: 1;
+    flex-direction: column;
   }
   .navHeader .navName {
     display: none;
@@ -423,7 +436,7 @@ footer form label {
     height: 100%;
     background-color: rgba(38, 29, 37, 0.6);
     padding: 50px;
-    color: whitesmoke;
+    color: rgb(45, 41, 41);
   }
   #aboutMe figure {
     flex-direction: column;

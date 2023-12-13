@@ -7,19 +7,49 @@
         overflow: visible;
 
         #hamburger {
-            display: block;
-            z-index: 999;
-            flex-grow: 0.99;
+            position: relative;
 
+            #burgerIcon{
+                display: block;
+            }
+
+            &:hover ul {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                left: 0;
+                top: 30px;
+                background-color: #9a7575;
+                opacity: 1;
+                z-index: 10;
+            }
+
+                &:hover ul li {
+                    margin: 0;
+                    padding: 10px 20px;
+                    width: $width;
+                    text-align: center;
+                }
+
+                &:hover ul a {
+                    color: white;
+                    text-decoration: none;
+                }
+        
             &:hover {
                 display: block;
             }
+        
+            ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #9a7575;
+                opacity: 1;
+                flex-direction: column;
+            }
         }
-
-        ul {
-            display: none;
-        }
-
         .navName {
             display: none;
         }
@@ -66,7 +96,7 @@
         height: 100%;
         background-color: rgba(38, 29, 37, 0.6);
         padding: 50px;
-        color: whitesmoke;
+        color: rgb(45, 41, 41);
 
         figure {
             flex-direction: column;

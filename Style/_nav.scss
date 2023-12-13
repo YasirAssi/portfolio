@@ -10,28 +10,6 @@
     align-items: center;
     overflow: hidden;
 
-    ul {
-        font: normal normal 500 15px/10px Heebo;
-        list-style-type: none;
-        display: flex;
-        flex-grow: 0.99;
-        margin-bottom: 0;
-        padding-left: 2rem;
-
-        li a {
-            text-decoration: none;
-            width: 150px;
-            color: #000;
-            display: block;
-            text-align: center;
-            font-size: 1.2em;
-        }
-
-        li a:hover {
-            font-weight: bolder;
-        }
-    }
-
     .navPhoto {
         height: 50%;
         width: 5%;
@@ -50,27 +28,35 @@
     font-weight: bold;
     padding: 5px;
     cursor: pointer;
-    display: none;
+    flex-grow: 0.99;
+    display: flex;
+    align-items: center;
 
-    &:hover+ul {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        left: 0;
-        top: 30px;
-        background-color: #333;
-        opacity: 0.5;
-    }
 
-    &:hover+ul li {
-        margin: 0;
-        padding: 10px 20px;
-        width: $width;
-        text-align: center;
-    }
+        #burgerIcon{
+            display: none;
+        }
 
-    &:hover+ul a {
-        color: white;
-        text-decoration: none;
-    }
+        ul {
+            font: normal normal 500 15px/10px Heebo;
+            list-style-type: none;
+            display: flex;
+            flex-grow: 0.99;
+            margin-bottom: 0;
+            padding-left: 2rem;
+
+        li a {
+            text-decoration: none;
+            width: 150px;
+            color: #000;
+            display: block;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        li a:hover {
+            font-weight: bolder;
+        }
+    } 
 }
+

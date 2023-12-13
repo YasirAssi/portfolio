@@ -7,10 +7,21 @@
 
 body{
     background-color: rgb(114, 180, 230);
+    background-image: url(../../TigerImages/weatherBack.jpg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+h1{
+    font-family:'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva;
+    margin-top: 20px;
+    background-image: linear-gradient(to bottom, rgba(36, 186, 203, 0.5), rgba(221, 169, 86, 0.5)),  url(../../../TigerImages/colorSpectrum.jpg);
 }
 
 .card{
@@ -56,16 +67,18 @@ body{
 
 .searchBtn{
     border-radius: 50%;
-    width: 80%;
-    height: 100%;
+    width: 60%;
+    height: 50%;
 }
-
 
 .weather{
     margin: 5px;
+    display: none;
 }
-.rainImg{
+
+.weatherImg{
     width: 30%;
+    margin: 15px;
 }
 
 .info{
@@ -73,4 +86,12 @@ body{
     flex-direction: row;
     justify-content: space-between;
     font-size: 1.5rem;
+}
+
+.error{
+    text-align: left;
+    margin-left: 20px;
+    font-size: 1rem;
+    margin-top: 10px;
+    display: none;
 }

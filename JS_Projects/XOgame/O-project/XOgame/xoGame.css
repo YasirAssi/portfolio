@@ -35,7 +35,6 @@ body {
 }
 
 .square{
-    margin: 1px;
     width: 118px;
     height: 118px;
     border: 1px solid black;

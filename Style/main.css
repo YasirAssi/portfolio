@@ -158,6 +158,7 @@ a {
 .techUsed .card img {
   width: 30%;
   height: 30%;
+  margin: 10px;
 }
 
 #aboutMe {

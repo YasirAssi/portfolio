@@ -336,7 +336,7 @@ footer form label {
   align-items: center;
   flex-wrap: wrap;
   height: 20%;
-  background-color: var(--bgc);
+  background-image: linear-gradient(to bottom, rgba(101, 163, 235, 0.5), rgba(255, 255, 255, 0.5)), url(../TigerImages/colorSpectrum.jpg);
   width: 100%;
   text-align: center;
   padding: 10px;

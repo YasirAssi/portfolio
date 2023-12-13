@@ -1,7 +1,7 @@
 .techUsed {
     height: 100%;
     width: $width;
-    background-color: rgb(232, 229, 229);
+    background-color: rgb(214, 200, 200);
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
@@ -11,6 +11,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        border: 0;
+
+        img{
+            width: 30%;
+            height: 30%;
+        }
+
     }
 }
 

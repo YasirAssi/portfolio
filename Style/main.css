@@ -276,11 +276,10 @@ img {
 
 footer {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   width: 100%;
-  height: 900px;
-  background-color: var(--colo);
-  background-repeat: no-repeat;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(212, 234, 237, 0.542), rgba(38, 18, 38, 0.5)), url(../TigerImages/colorSpectrum.jpg);
   margin: 0;
 }
 footer h3 {
@@ -292,12 +291,13 @@ footer h3 {
   font-size: 2.25em;
 }
 footer img {
-  width: 10%;
-  height: 20%;
+  width: 30%;
+  height: 10%;
 }
 footer form {
   display: block;
   margin-left: 200px;
+  height: 80%;
   width: 50%;
   padding: 30px;
 }

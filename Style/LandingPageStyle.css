@@ -174,13 +174,6 @@ a {
   }
   .navHeader #hamburger:hover ul {
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 0;
-    top: 30px;
-    background-color: #9a7575;
-    opacity: 1;
-    z-index: 10;
   }
   .navHeader #hamburger:hover ul li {
     margin: 0;
@@ -203,6 +196,7 @@ a {
     background-color: #9a7575;
     opacity: 1;
     flex-direction: column;
+    width: 50%;
   }
   .navHeader .navName {
     display: none;

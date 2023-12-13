@@ -117,7 +117,6 @@ let winTheGame = () => {
         alert(`player with '${playerTurn}' wins, good job start new round!`);
         return true; 
     }
-    alert ('Nice Game, It Is a Tie, Try With New Round');
     return false;
 }
 

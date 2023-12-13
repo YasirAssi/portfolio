@@ -67,15 +67,10 @@ function dragOver(e){
 function dragDrop(e) {
     e.stopPropagation();
     const correctGo = draggedElement.firstElementChild.classList.contains(playerGo);
-    console.log(correctGo);
     const taken = e.target.classList.contains('piece');
     const valid = checkIfValid(e.target);
     const opponentGo = playerGo === 'white' ? 'black' : 'white';
-    const takenByOpponent = e.target.classList.contains(opponentGo);
-    // for some reason its not reading the firs child of square(e.target) 
-    console.log(e.target);
-    console.log(takenByOpponent);
-    console.log(taken);
+    const takenByOpponent = e.target.classList.contains(opponentGo); 
 
     if(correctGo){
         if(takenByOpponent && valid){

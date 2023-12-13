@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameBoard{
+    width: 365px;
+    height: 365px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+.square{
+    margin: 1px;
+    width: 118px;
+    height: 118px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+}
+
+#reset{
+    margin: 10px;
+    border-radius: 5%;
+}

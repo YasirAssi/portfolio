@@ -54,12 +54,13 @@ xBtn.onclick = () => {
 
 oBtn.onclick = () => {
     let chooseOSquare = prompt('choose from 1-9');
+
     if(!chooseOSquare || isNaN(chooseOSquare) || chooseOSquare < 1 || chooseOSquare > 9) {
         alert ('plaese pick your square');
         return;
+
     } else if(allSquares[chooseOSquare - 1].innerText != 'X' && allSquares[chooseOSquare - 1].innerText != 'O') {
         xBtn.disabled = false;
-        winTheGame();
         allSquares[chooseOSquare - 1].innerHTML = 'O';
         allSquares[chooseOSquare - 1].style.color = 'orange';
         if(winTheGame()){
@@ -117,6 +118,7 @@ let winTheGame = () => {
         alert(`player with '${playerTurn}' wins, good job start new round!`);
         return true; 
     }
+            alert('Tie! Try New Round')
     return false;
 }
 

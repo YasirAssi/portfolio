@@ -41,6 +41,7 @@ xBtn.onclick = () => {
         if(winTheGame()){
         xBtn.disabled = true;
         oBtn.disabled = true;
+        displayTurn.style.textDecoration = 'line-through';
         }
         xBtn.disabled = true;
         playerTurn = playerTurn === 'X' ? 'O' : 'X';
@@ -64,6 +65,7 @@ oBtn.onclick = () => {
         if(winTheGame()){
         xBtn.disabled = true;
         oBtn.disabled = true;
+        displayTurn.style.textDecoration = 'line-through';
         }
         oBtn.disabled = true;
         playerTurn = playerTurn === 'X' ? 'O' : 'X';

@@ -150,6 +150,9 @@ a {
 }
 .techUsed .card {
   background-color: rgb(214, 200, 200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #aboutMe {

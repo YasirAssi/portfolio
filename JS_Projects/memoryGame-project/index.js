@@ -8,6 +8,7 @@ let lockBoard = false;
   .then(response => {
   const data = response.data;
   cards = [...data, ...data];
+  console.log(data);
   shuffleCards();
   generateCards();
   });

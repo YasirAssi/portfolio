@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>project 2 Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="../../Style/LandingPageStyle.css">
 </head>
 
@@ -14,16 +16,18 @@
     </div>
 
     <nav class="navHeader">
-        <div id="hamburger">&#9776;</div>
-        <ul>
-            <li><a href="../../index.html" alt="Portfolio" target="_blank">Portfolio Intro</a></li>
-            <li><a href="../../index.html" alt="about me" target="_blank">About Me</a></li>
-            <li><a href="../../index.html" alt="Projects" target="_blank">Projects</a></li>
-            <li><a href="../../index.html" alt="contact us" target="_blank">Contact Us</a></li>
-        </ul>
-        <a href="../../index.html" target="_blank"><img src="../../TigerImages/yasirAsi.png" alt="yasirAsi"
-                class="navPhoto"></a>
-        <img src="../../TigerImages/personalimage.png" alt="person icon" class="navIcon">
+        <div id="hamburger">
+            <div id="burgerIcon">&#9776;</div>
+            <ul> 
+                <li><a href="#header-container">Portfolio Intro</a></li>
+                <li><a href="#aboutMe">About Me</a></li>
+                <li><a href="#Cssproject">Projects</a></li>
+                <li><a href="#contactus">Contact Us</a></li>
+            </ul>
+        </div>    
+        <a href="./index.html" target="_blank"><img src="../../TigerImages/yasirAsi.png" alt="yasirAsi"
+                class="navName"></a>
+        <img src="../../TigerImages/personalimage.png" alt="person icon" class="navPhoto">
     </nav>
 
     <section id="header-container">
@@ -46,10 +50,36 @@
     </section>
 
     <div class="techUsed">
-        <img src="../../TigerImages/sassicon.png" alt="SASS">
-        <img src="../../TigerImages/htmlicon.png" alt="HTML">
-        <img src="../../TigerImages/bootstrapicon.png" alt="BOOTSTRAP">
-        <img src="../../TigerImages/cssIcon.png" alt="CSS">
+        <div class="card" style="width: 18rem;">
+            <img src="../../TigerImages/sass.png" alt="SASS">
+            <div class="card-body">
+                <p class="card-text">Sass is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets. It is the scripting language itself. Sass consists of two syntaxes.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="../../TigerImages/HTMLimages.png" alt="HTML">
+            <div class="card-body">
+                <p class="card-text">The standard markup language for documents designed to be displayed in a web.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="../../TigerImages/bootstsrap.jpg" alt="BOOTSTRAP">
+            <div class="card-body">
+                <p class="card-text">Powerful, extensible, and feature-packed frontend toolkit. With Bootstrap bring projects to life with JavaScript plugins.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+                    <img src="../../TigerImages/CSS.png" alt="CSS">
+            <div class="card-body">
+                <p class="card-text">Cascading Style Sheets (CSS) is a simple mechanism for adding style to Web documents.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="../../TigerImages/JSc.png" alt="JS">
+            <div class="card-body">
+                <p class="card-text">JavaScript (JS),is a programming language that is a core technology of the World Wide Web.</p>
+            </div>
+        </div>    
     </div>
 
     <div class="container">

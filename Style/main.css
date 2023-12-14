@@ -139,7 +139,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0;
+  border: 1px solid black;
+  height: 250px;
 }
 .techUsed .card img {
   width: 30%;

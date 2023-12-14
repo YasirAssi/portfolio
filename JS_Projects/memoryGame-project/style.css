@@ -28,6 +28,7 @@ p {
     border-radius: 10px;
     background-color: #27ae60;
     color: white;
+    margin: 20px;
 }
 
 .grid-container {

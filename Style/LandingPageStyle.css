@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+body {
+  height: 100%;
+  width: 100%;
+}
+
 :root {
   --colo: #3A3A3A;
   --bgc: #1fc0e1;

@@ -125,6 +125,7 @@ a {
   width: 30%;
   height: 30%;
   margin: 10px;
+  cursor: help;
 }
 
 #header-container {

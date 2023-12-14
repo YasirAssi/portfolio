@@ -1,4 +1,4 @@
-const gridContainer = document.querySelector(".grid-container");
+const gridContainer = document.querySelector(".container");
 let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
@@ -8,7 +8,6 @@ let lockBoard = false;
   .then(response => {
   const data = response.data;
   cards = [...data, ...data];
-  console.log(data);
   shuffleCards();
   generateCards();
   });
@@ -54,6 +53,8 @@ function flipCard() {
   }
 
   secondCard = this;
+  score++;
+  document.querySelector(".score").textContent = score;
   lockBoard = true;
 
   checkForMatch();

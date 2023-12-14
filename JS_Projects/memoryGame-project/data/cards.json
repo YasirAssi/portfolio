@@ -1,10 +1,10 @@
 [
     {
-        "image": "src='../../../TigerImages/chili.png'",
+        "image": "../../../TigerImages/chili.png",
         "name": "chili"
     },
     {
-        "image": "src='../../../TigerImages/grapes.png'",
+        "image": "../../../TigerImages/grapes.png",
         "name": "grapes"
     },
     {

@@ -1,4 +1,4 @@
-const paragraphI = "I am excited to present my latest projects, a comprehensive showcase of my skills in web development. Proficient in HTML, CSS, Bootstrap, and SASS (First Module). Within this collection, you'll find six distinct First Module landing pages, each thoughtfully designed to emphasize various facets of my web development skills within this module.In addition you will meet my first 9 projects with JavaScript. Leveraging the power of JavaScript, I enhance user interfaces and bring dynamic functionality to my projects.";
+const paragraphI = "I am excited to present my latest projects, a comprehensive showcase of my skills in web development, HTML, CSS, Bootstrap, and SASS (First Module). Within this collection, you'll find six distinct First Module landing pages, each thoughtfully designed to emphasize various facets of my web development skills within this module.In addition you will meet my first 9 projects with JavaScript. Leveraging the power of JavaScript, Is bring dynamic functionality to my projects.";
             
 const wordArrayI = paragraphI.split(' ');
 const containerI = document.getElementById('wordByWordI');

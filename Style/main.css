@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Quicksand&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -118,7 +120,7 @@ a {
   width: 100%;
 }
 #header-container h1 {
-  font: normal normal 900 40px/50px Heebo;
+  font: normal normal 900 35px/50px Heebo;
   word-spacing: 0;
   color: aqua;
 }
@@ -131,7 +133,7 @@ a {
   margin-top: 40px;
 }
 #header-container #MeImg .MeImg {
-  height: 80%;
+  height: 90%;
   width: 60%;
 }
 #header-container #MeImg .MeImg:hover {
@@ -142,14 +144,15 @@ a {
 #header-container .text-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: first baseline;
   flex-direction: column;
   width: 55%;
-  height: 60%;
+  height: 100%;
   color: aqua;
 }
 #header-container .text-container #wordByWordI {
-  font: normal normal 500 20px/30px Heebo;
+  font-family: "Nanum Brush Script", cursive;
+  font-size: 2rem;
   text-align: center;
   display: inline-block;
   margin-right: 5px;
@@ -213,9 +216,13 @@ a {
   height: 100%;
   text-align: center;
 }
+#aboutMe figure #wordByWord {
+  font-family: "Nanum Brush Script", cursive;
+  font-size: 2rem;
+}
 #aboutMe figure h1 {
   font-size: 100px;
-  font-family: "Segoe UI";
+  font-family: "Nanum Brush Script", cursive;
   margin: 40px;
   height: 100%;
 }

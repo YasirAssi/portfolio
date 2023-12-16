@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery</title>
+    <link rel="stylesheet" href="./style/gallery.css">
+    <script src="gallery.js" type="module" async defer></script>
+</head>
+<body>
+    <form action="../Countries API/countries_index.html" id='galleryForm' target="_blank">
+        <div class="img">
+            <img src="../../TigerImages/countries.png" alt="countris">
+        </div>
+
+        <div class="container">
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" id="email" required>
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" id="password" required>
+
+            <button type="submit" id="submit">Login</button>
+
+            <label><input type="checkbox" id="rememberMe"> Remember me </label>
+            <label><input type="checkbox" onclick="showPassword()"> Show Password </label>
+        </div>
+
+        <div class="container">
+            <button type="button" class="cancelBtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body #galleryForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(5, 5, 131);
+    height: 80vh;
+    width: 40vw;
+}
+
+#galleryForm .img, .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.container #userName, #password{
+    margin: 10px;
+    width: 80%;
+}
+
+.container #rememberMe, #submit{
+    margin: 10px;
+}
+
+.img img{
+    width: 20vw;
+}
+

@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -13,34 +13,49 @@ body{
     align-items: center;
 }
 
-body #galleryForm{
+#galleryForm {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 1px solid rgb(5, 5, 131);
     height: 80vh;
-    width: 40vw;
+    width: 80vw; 
+    max-width: 400px;
+    max-height: 1000px; 
+    padding: 20px; 
+    z-index: 1;
 }
 
-#galleryForm .img, .container{
+#galleryForm .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 10px;
+    width: 100%; 
 }
 
-.container #userName, #password{
+#galleryForm .container input {
     margin: 10px;
-    width: 80%;
+    width: 100%; 
 }
 
-.container #rememberMe, #submit{
+#galleryForm .container #rememberMe, #galleryForm .container #submit, .cancelBtn {
     margin: 10px;
+    width: 100%; 
 }
 
-.img img{
-    width: 20vw;
+#galleryForm .img img {
+    width: 100%; 
+    max-width: 200px;
+    opacity: 0.7; 
+    z-index: -1;
 }
 
+
+@media (max-width: 768px) {
+    #galleryForm {
+        width: 100vw; 
+    }
+}

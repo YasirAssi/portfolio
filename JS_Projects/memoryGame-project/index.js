@@ -93,3 +93,43 @@ function restart() {
   gridContainer.innerHTML = "";
   generateCards();
 }
+
+
+// [
+//     {
+//         "image": "../../../TigerImages/chili.png",
+//         "name": "chili"
+//     },
+//     {
+//         "image": "../../../TigerImages/grapes.png",
+//         "name": "grapes"
+//     },
+//     {
+//         "image": "../../../TigerImages/lemon.png",
+//         "name": "lemon"
+//     },
+//     {
+//         "image": "../../../TigerImages/orange.png",
+//         "name": "orange"
+//     },
+//     {
+//         "image": "../../../TigerImages/pineapple.png",
+//         "name": "pineapple"
+//     },
+//     {
+//         "image": "../../../TigerImages/strawberry.png",
+//         "name": "strawberry"
+//     },
+//     {
+//         "image": "../../../TigerImages/tomato.png",
+//         "name": "tomato"
+//     },
+//     {
+//         "image": "../../../TigerImages/watermelon.png",
+//         "name": "watermelon"
+//     },
+//     {
+//         "image": "../../../TigerImages/cherries.png",
+//         "name": "cherries"
+//     }
+// ]

@@ -4,7 +4,7 @@
     background-position: top left;
     background-size: cover;
     background-attachment: fixed;
-    height: 28.8125em;
+    height: 35.8125em;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -14,10 +14,11 @@
         font: normal normal 900 40px/50px Heebo;
         word-spacing: 0;
         color: aqua;
-    }
+        }
+        
     #MeImg{
-    height: 100%;
-    width: 40%;    
+    height: 40%;
+    width: 20%;    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,33 +26,35 @@
 
         .MeImg{
             height: 80%;
-            width: 40%;
-            margin: 40px;
-            
-
+            width: 60%;
+        
             &:hover {
-                transform: scale(2);
-                transition: all 1.5s ease-in-out;
+                transform: scale(1.4);
+                transition: all 1.3s ease-in-out;
                 cursor: pointer;
             }
         }
             
         }
-}
+
+    .text-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 55%;
+        height: 60%;
+        color: aqua;
 
 
-.text-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 55%;
-    height: 100%;
-    color: aqua;
+            #wordByWordI {
+                font: normal normal 500 20px/30px Heebo;
+                text-align: center;
+                display: inline-block; 
+                margin-right: 5px;
+                height: 50%;
+            }
+    }
 }
 
-.text-container>p {
-    font: normal normal 500 20px/30px Heebo;
-    text-align: center;
-}
 

@@ -30,10 +30,12 @@
             height: 100%;
         }
 
-        figcaption {
+        #wordByWord{
         font: normal normal normal 20px/10px Heebo;
         text-align: justify;
-        line-height: 1.5;
+        line-height: 1.5;   
+        display: inline-block; 
+        margin-right: 5px; 
 
             &:hover{
                 cursor: pointer;

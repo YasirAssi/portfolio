@@ -7,7 +7,11 @@ footer {
     flex-direction: row;
     width: $width;
     height: 100%;
-    background-image: linear-gradient(to bottom, rgba(212, 234, 237, 0.542), rgba(38, 18, 38, 0.5)), url(../TigerImages/colorSpectrum.jpg);
+    background-image: linear-gradient(to bottom, rgba(173, 201, 233, 0.5), rgba(181, 77, 181, 0.5)), url(../TigerImages/aura-icegif-1.gif);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+    background-attachment: fixed;
     margin: 0;
 
     h3 {

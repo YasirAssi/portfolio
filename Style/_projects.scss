@@ -1,7 +1,11 @@
 #Cssproject {
     width: $width;
     height: 30%;
-    background-image: linear-gradient(to bottom, rgba(173, 201, 233, 0.5), rgba(181, 77, 181, 0.5)), url(../TigerImages/colorSpectrum.jpg);
+    background-image: linear-gradient(to bottom, rgba(173, 201, 233, 0.5), rgba(181, 77, 181, 0.5)), url(../TigerImages/fireBall.gif);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+    background-attachment: fixed;
     margin: 0;
     padding: 10px;
 
@@ -19,7 +23,11 @@
 #JavaSproject {
     width: $width;
     height: 30%;
-    background-image: linear-gradient(to bottom, rgba(234, 174, 43, 0.542), rgba(38, 18, 38, 0.5)), url(../TigerImages/colorSpectrum.jpg);
+    background-image: linear-gradient(to bottom, rgba(234, 174, 43, 0.542), rgba(38, 18, 38, 0.5)), url(../TigerImages/fullMind.gif);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+    background-attachment: fixed;
     margin: 0;
     padding: 10px;
 

@@ -154,18 +154,20 @@ a {
   word-spacing: 0;
   color: aqua;
 }
-#header-container #aboutMe {
+#header-container #MeImg {
   height: 100%;
-  width: 50%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
 }
-#header-container #aboutMe .aboutMeImg {
-  height: 100%;
-  width: 70%;
-  -o-object-fit: cover;
-     object-fit: cover;
+#header-container #MeImg .MeImg {
+  height: 80%;
+  width: 40%;
   margin: 40px;
 }
-#header-container #aboutMe .aboutMeImg:hover {
+#header-container #MeImg .MeImg:hover {
   transform: scale(2);
   transition: all 1.5s ease-in-out;
   cursor: pointer;

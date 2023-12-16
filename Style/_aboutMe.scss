@@ -10,7 +10,6 @@
     background-position: top left;
     background-size: cover;
     background-attachment: fixed;
-
     padding: 50px;
     color: rgb(27, 24, 24);
     margin: 0;
@@ -25,9 +24,10 @@
         text-align: center;
 
         h1{
-            font-size: 50px;
+            font-size: 100px;
             font-family: 'Segoe UI';
             margin: 40px;
+            height: 100%;
         }
 
         figcaption {

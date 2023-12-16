@@ -15,15 +15,19 @@
         word-spacing: 0;
         color: aqua;
     }
-    #aboutMe{
+    #MeImg{
     height: 100%;
-    width: 50%;    
+    width: 40%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
 
-        .aboutMeImg{
-            height: 100%;
-            width: 70%;
-            object-fit: cover;
+        .MeImg{
+            height: 80%;
+            width: 40%;
             margin: 40px;
+            
 
             &:hover {
                 transform: scale(2);
@@ -44,7 +48,6 @@
     width: 55%;
     height: 100%;
     color: aqua;
-    // background-image: linear-gradient(to bottom, rgba(101, 163, 235, 0.5), rgba(255, 255, 255, 0.5)), url(../TigerImages/colorSpectrum.jpg);
 }
 
 .text-container>p {

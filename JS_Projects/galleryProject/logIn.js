@@ -1,7 +1,5 @@
 import UsersLogIn from './usersLogInStorage.js';
 
-
-
 let rememberMe = document.getElementById('rememberMe');
 let submit = document.getElementById('submit');
 const cancelBtn = document.querySelector('.cancelBtn');
@@ -25,7 +23,7 @@ window.showPassword = () => {
 }
 
 let reset = () => {
-    document.getElementById('userName').value = '';
+    document.getElementById('email').value = '';
     document.getElementById('password').value = '';
 }
 

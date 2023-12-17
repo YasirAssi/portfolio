@@ -34,7 +34,7 @@
     .card {
         height: 280px;
         margin: 10px;
-        background-color: rgb(83, 81, 81);
+        background-color: rgb(145, 58, 58);
     }
 
     p {
@@ -46,6 +46,11 @@
 
 .btn {
     @include bTn;
+    background-image: linear-gradient(to bottom, rgba(219, 225, 231, 0.5), rgba(230, 215, 163, 0.5)), url(../TigerImages/sand.gif);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+    background-attachment: fixed;
     width: 250px;
     height: 30px;
 }

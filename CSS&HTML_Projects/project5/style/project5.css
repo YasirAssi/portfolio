@@ -14,7 +14,7 @@
 
 header {
     background-color: var(--bgc);
-    width: 100%;
+    width: var(--full_H_W);
     height: 700px;
     display: flex;
     justify-content: space-between;
@@ -93,37 +93,29 @@ p {
 }
 
 .container {
+    background-color: #1c95e0;
     display: flex;
+    justify-content: space-evenly;
     width: var(--full_H_W);
     height: var(--full_H_W);
-}
-
-.container .container1,
-.container2 {
-    justify-content: center;
-    align-items: center;
-    width: var(--full_H_W);
-    height: var(--full_H_W);
-}
-
-.container2 {
-    background: #1c95e0;
 }
 
 .container2 img {
     width: var(--full_H_W);
     height: var(--full_H_W);
-    padding: 76px;
-}
-
-.container1 {
-    background-color: #c8fafa;
+    padding: 30px;
+    cursor: move;
 }
 
 .container1 form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: var(--full_H_W);
     height: var(--full_H_W);
     padding: 5px;
+    background-color: #c8fafa;
 }
 
 form h3 {
@@ -230,7 +222,8 @@ footer {
     }
 
     .container {
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
 
     form h3 {

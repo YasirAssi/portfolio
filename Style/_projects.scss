@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Quicksand&display=swap');
+
 #Cssproject {
     width: $width;
     height: 30%;
@@ -9,7 +11,22 @@
     margin: 0;
     padding: 10px;
 
+    h2{
+        text-align: center;
+        font-family: 'Nanum Brush Script', cursive;
+        font-size: 40px;
+        color: azure;
+    }
+
+    p{
+        text-align: center;
+        font-family: 'Nanum Brush Script', cursive;
+        font-size: 40px;
+        color: azure;
+    }
+
     .card {
+        cursor: grabbing;
         height: 280px;
         margin: 10px;
         background-color: rgb(97, 194, 247);
@@ -50,7 +67,22 @@
     margin: 0;
     padding: 10px;
 
+    h2{
+        text-align: center;
+        font-family: 'Nanum Brush Script', cursive;
+        font-size: 40px;
+        color: azure;
+    }
+
+    p{
+        text-align: center;
+        font-family: 'Nanum Brush Script', cursive;
+        font-size: 40px;
+        color: azure;
+    }
+
     .card {
+        cursor: grabbing;
         height: 280px;
         margin: 10px;
         background-color: rgb(145, 58, 58);
@@ -100,7 +132,6 @@
 }
 }
 
-
 img{
     height: 150px;
     width: 150px;
@@ -109,3 +140,4 @@ img{
         opacity: 0.2;
     }
 }
+

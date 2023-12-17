@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Quicksand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Quicksand&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -266,7 +267,20 @@ a {
   margin: 0;
   padding: 10px;
 }
+#Cssproject h2 {
+  text-align: center;
+  font-family: "Nanum Brush Script", cursive;
+  font-size: 40px;
+  color: azure;
+}
+#Cssproject p {
+  text-align: center;
+  font-family: "Nanum Brush Script", cursive;
+  font-size: 40px;
+  color: azure;
+}
 #Cssproject .card {
+  cursor: grabbing;
   height: 280px;
   margin: 10px;
   background-color: rgb(97, 194, 247);
@@ -304,7 +318,20 @@ a {
   margin: 0;
   padding: 10px;
 }
+#JavaSproject h2 {
+  text-align: center;
+  font-family: "Nanum Brush Script", cursive;
+  font-size: 40px;
+  color: azure;
+}
+#JavaSproject p {
+  text-align: center;
+  font-family: "Nanum Brush Script", cursive;
+  font-size: 40px;
+  color: azure;
+}
 #JavaSproject .card {
+  cursor: grabbing;
   height: 280px;
   margin: 10px;
   background-color: rgb(145, 58, 58);

@@ -477,10 +477,10 @@ footer form label {
     text-align: center;
   }
   #header-container #MeImg {
-    display: none;
+    background-image: none;
   }
   #header-container .text-container {
-    width: 100%;
+    width: 80%;
     height: 60%;
     color: aqua;
     text-align: justify;

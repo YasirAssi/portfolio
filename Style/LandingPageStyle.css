@@ -256,10 +256,10 @@ a {
     text-align: center;
   }
   #header-container #MeImg {
-    display: none;
+    background-image: none;
   }
   #header-container .text-container {
-    width: 100%;
+    width: 80%;
     height: 60%;
     color: aqua;
     text-align: justify;
@@ -340,12 +340,16 @@ html {
   scroll-behavior: smooth;
 }
 
+.text-container {
+  display: flex;
+}
 .text-container p {
   text-align: justify;
 }
-
 .text-container h1 {
   margin-top: 10px;
+  justify-self: center;
+  align-items: center;
 }
 
 .container {
@@ -368,6 +372,9 @@ html {
 
 .buttons {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 15px;
 }
 

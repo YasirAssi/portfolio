@@ -8,7 +8,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-image: url(../pBuilderImages/blocks.jpg);
+    background-image: url(../assets/blocks.jpg);
     background-repeat: no-repeat;
     background-position: top left;
     background-size: 40% 100%;
@@ -51,8 +51,10 @@ label{
 }
 
 footer{
+    display: flex;
+    flex-direction: column;
     margin: 5px;
-    width: 70%;
+    width: 80%;
 }
 
 .btn:active {

@@ -19,21 +19,20 @@
         }
         
     #MeImg{
-    height: 40%;
-    width: 20%;    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
+        height: 70%;
+        width: 20%;    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        background-image: url(../TigerImages/wedding.jpg);
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: cover;
+        filter: brightness(100%) sepia(200%) hue-rotate(20deg);
 
-        .MeImg{
-            height: 90%;
-            width: 60%;
-        
             &:hover {
-                transform: scale(1.4);
-                transition: all 1.3s ease-in-out;
-                cursor: pointer;
+                filter: brightness(100%) sepia(40%) hue-rotate(20deg);
             }
         }
             
@@ -58,6 +57,5 @@
                 height: 50%;
             }
     }
-}
 
 

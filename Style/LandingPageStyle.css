@@ -156,23 +156,23 @@ a {
   color: aqua;
 }
 #header-container #MeImg {
-  height: 40%;
+  height: 70%;
   width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 40px;
+  background-image: url(../TigerImages/wedding.jpg);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  filter: brightness(100%) sepia(200%) hue-rotate(20deg);
 }
-#header-container #MeImg .MeImg {
-  height: 90%;
-  width: 60%;
+#header-container #MeImg:hover {
+  filter: brightness(100%) sepia(40%) hue-rotate(20deg);
 }
-#header-container #MeImg .MeImg:hover {
-  transform: scale(1.4);
-  transition: all 1.3s ease-in-out;
-  cursor: pointer;
-}
-#header-container .text-container {
+
+.text-container {
   display: flex;
   justify-content: center;
   align-items: first baseline;
@@ -181,7 +181,7 @@ a {
   height: 100%;
   color: aqua;
 }
-#header-container .text-container #wordByWordI {
+.text-container #wordByWordI {
   font-family: "Nanum Brush Script", cursive;
   font-size: 2rem;
   text-align: center;
@@ -253,16 +253,7 @@ a {
     word-spacing: 0;
   }
   #header-container #MeImg {
-    height: 50%;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-  }
-  #header-container #MeImg .MeImg {
-    height: 60%;
-    width: 60%;
+    display: none;
   }
   #header-container .text-container {
     width: 55%;

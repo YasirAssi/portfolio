@@ -11,9 +11,12 @@ html {
 
 .text-container{
     display: flex;
+    justify-content: center;
+    align-items: center;
 
         p{
             text-align: justify;
+            
         }
 
         h1{

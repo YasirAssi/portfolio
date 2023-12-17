@@ -342,6 +342,8 @@ html {
 
 .text-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .text-container p {
   text-align: justify;

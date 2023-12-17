@@ -268,6 +268,7 @@ a {
 #Cssproject .card {
   height: 280px;
   margin: 10px;
+  background-color: rgb(97, 194, 247);
 }
 #Cssproject p {
   text-align: center;
@@ -469,7 +470,7 @@ footer form label {
     height: 100%;
   }
   #header-container h1 {
-    font: normal normal 900 30px/40px Heebo;
+    font-size: 40px 10px;
     word-spacing: 0;
   }
   #header-container #MeImg {
@@ -478,10 +479,10 @@ footer form label {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px;
+    margin: 10px;
   }
   #header-container #MeImg .MeImg {
-    height: 80%;
+    height: 60%;
     width: 60%;
   }
   #header-container .text-container {

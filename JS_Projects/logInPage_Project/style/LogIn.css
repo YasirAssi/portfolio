@@ -20,8 +20,6 @@ body {
     align-items: center;
     border: 1px solid rgb(5, 5, 131);
     height: 80vh;
-    width: 80vw; 
-    max-width: 400px;
     max-height: 1000px; 
     padding: 20px; 
     z-index: 1;
@@ -38,12 +36,23 @@ body {
 
 #galleryForm .container input {
     margin: 10px;
-    width: 100%; 
+    width: 80%; 
 }
 
-#galleryForm .container #rememberMe, #galleryForm .container #submit, .cancelBtn {
+#galleryForm .container #rememberMe, #pswd, #submit, .cancelBtn {
+    width: 80%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 10px;
-    width: 100%; 
+}
+
+.check{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #galleryForm .img img {
@@ -53,9 +62,9 @@ body {
     z-index: -1;
 }
 
-
 @media (max-width: 768px) {
     #galleryForm {
-        width: 100vw; 
+        width: 100vw;
+        height: 100vh; 
     }
 }

@@ -25,10 +25,12 @@
         justify-content: center;
         align-items: center;
         margin-top: 40px;
-        background-image: url(../TigerImages/wedding.jpg);
+        background-image: url(../TigerImages/yasir\ asi.png);
         background-repeat: no-repeat;
         background-position: top left;
         background-size: cover;
+        opacity: 0.8;
+        border-radius: 33%;
         filter: brightness(100%) sepia(200%) hue-rotate(20deg);
 
             &:hover {

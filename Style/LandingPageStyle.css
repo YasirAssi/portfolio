@@ -250,6 +250,11 @@ a {
   #header-container {
     flex-direction: column;
     height: 100%;
+    background-image: linear-gradient(to bottom, rgba(234, 174, 43, 0.542), rgba(38, 18, 38, 0.5)), url(../TigerImages/yelloBall.gif);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
   }
   #header-container h1 {
     font-size: 40px 10px;
@@ -284,12 +289,22 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(to bottom, rgba(234, 174, 43, 0.542), rgba(38, 18, 38, 0.5)), url(../TigerImages/yelloBall.gif);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
   }
   .techUsed .card {
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid wheat;
+    background-image: linear-gradient(to bottom, rgba(234, 174, 43, 0.542), rgba(38, 18, 38, 0.5)), url(../TigerImages/yelloBall.gif);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
   }
   .techUsed .card img {
     width: 30%;
@@ -327,6 +342,11 @@ a {
   footer {
     flex-direction: column;
     align-items: center;
+    background-image: linear-gradient(to bottom, rgba(173, 201, 233, 0.5), rgba(181, 77, 181, 0.5)), url(../TigerImages/aura-icegif-1.gif);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
   }
   footer form,
   footer form h3 {
@@ -336,8 +356,29 @@ a {
   }
   .contactMethods {
     height: 400px;
+    background-image: linear-gradient(to bottom, rgba(173, 201, 233, 0.5), rgba(181, 77, 181, 0.5)), url(../TigerImages/aura-icegif-1.gif);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
   }
 }
+#JavaSproject {
+  background-image: linear-gradient(to bottom, rgba(234, 174, 43, 0.542), rgba(38, 18, 38, 0.5)), url(../TigerImages/fullMind.gif);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#Cssproject {
+  background-image: linear-gradient(to bottom, rgba(173, 201, 233, 0.5), rgba(181, 77, 181, 0.5)), url(../TigerImages/fireBall.gif);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 html {
   scroll-behavior: smooth;
 }

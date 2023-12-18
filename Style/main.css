@@ -278,14 +278,14 @@ a {
   font-size: 40px;
   color: azure;
 }
-#Cssproject p {
+#Cssproject .head-para {
   text-align: center;
   font-family: "Nanum Brush Script", cursive;
   font-size: 40px;
   color: azure;
   cursor: pointer;
 }
-#Cssproject p:hover {
+#Cssproject .head-para:hover {
   transform: scaleY(1.5);
   transition: all 1s ease-in-out;
 }
@@ -334,14 +334,14 @@ a {
   font-size: 40px;
   color: azure;
 }
-#JavaSproject p {
+#JavaSproject .head-para {
   text-align: center;
   font-family: "Nanum Brush Script", cursive;
   font-size: 40px;
   color: azure;
   cursor: pointer;
 }
-#JavaSproject p:hover {
+#JavaSproject .head-para:hover {
   transform: scaleY(1.5);
   transition: all 1s ease-in-out;
 }

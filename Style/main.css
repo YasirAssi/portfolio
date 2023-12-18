@@ -139,10 +139,11 @@ a {
   background-size: cover;
   opacity: 0.8;
   border-radius: 33%;
-  filter: brightness(100%) sepia(200%) hue-rotate(20deg);
+  filter: brightness(100%) sepia(200%) hue-rotate(50deg);
 }
 #header-container #MeImg:hover {
-  filter: brightness(100%) sepia(40%) hue-rotate(20deg);
+  filter: brightness(100%) sepia(20%) hue-rotate(20deg);
+  cursor: not-allowed;
 }
 
 .text-container {
@@ -161,6 +162,7 @@ a {
   display: inline-block;
   margin-right: 5px;
   height: 50%;
+  cursor: pointer;
 }
 
 .techUsed {
@@ -187,6 +189,7 @@ a {
   border: 1px solid wheat;
   height: 250px;
   color: aqua;
+  cursor: pointer;
 }
 .techUsed .card img {
   width: 30%;
@@ -280,6 +283,11 @@ a {
   font-family: "Nanum Brush Script", cursive;
   font-size: 40px;
   color: azure;
+  cursor: pointer;
+}
+#Cssproject p:hover {
+  transform: scaleY(1.5);
+  transition: all 1s ease-in-out;
 }
 #Cssproject .card {
   cursor: grabbing;
@@ -331,6 +339,11 @@ a {
   font-family: "Nanum Brush Script", cursive;
   font-size: 40px;
   color: azure;
+  cursor: pointer;
+}
+#JavaSproject p:hover {
+  transform: scaleY(1.5);
+  transition: all 1s ease-in-out;
 }
 #JavaSproject .card {
   cursor: grabbing;

@@ -23,6 +23,12 @@
         font-family: 'Nanum Brush Script', cursive;
         font-size: 40px;
         color: azure;
+        cursor: pointer;
+
+        &:hover{
+            transform: scaleY(1.5);
+            transition: all 1s ease-in-out;
+        }
     }
 
     .card {
@@ -79,7 +85,13 @@
         font-family: 'Nanum Brush Script', cursive;
         font-size: 40px;
         color: azure;
-    }
+        cursor: pointer;
+
+            &:hover{
+                transform: scaleY(1.5);
+                transition: all 1s ease-in-out;
+            }
+        }
 
     .card {
         cursor: grabbing;

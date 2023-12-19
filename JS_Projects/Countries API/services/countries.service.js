@@ -13,11 +13,23 @@ const search = (text) => {
         const countryName =  country.name.common.toLowerCase();
         return countryName.includes(text.toLowerCase());
     })
-}    
+} 
+
+const sort = () => {
+    const sortedList = countries.sort((a, b) => {
+        const nameA = a.name.common.toLowerCase();
+        const nameB = b.name.common.toLowerCase();
+        return nameA.localeCompare(nameB);
+    });
+
+    return sortedList;
+}
 
 const reset = () => {
         countries = [...countriesFull];
     }
 
-export { countries, reset, search }
+export { countries, reset, search, sort }
+
+
 

@@ -1,12 +1,15 @@
-import { countries, reset, search } from "./countries.service.js";
+import { countries, reset, search, sort } from "./countries.service.js";
 import { getData, likedCountries, updateData } from "./localStorage.service.js";
 
+
+let isSorted = false;
 const searchInput = document.getElementById('search');
 const cards  = document.getElementById('cards');
 
 searchInput.addEventListener('keyup', (event) => {
     reset();
     cards.innerHTML = '';
+    console.log(searchInput);
 
     if (!event.target.value || event.target.value == ''){
         return createCardList();
@@ -15,6 +18,25 @@ searchInput.addEventListener('keyup', (event) => {
     search(event.target.value);
     createCardList();
 })
+
+const sortCountries = document.getElementById('sortBtn');
+sortCountries.addEventListener('click', () => {
+    if (!isSorted) {
+        const sortedCountries = sort();
+        resetUI();
+        createCardList(sortedCountries);
+        console.log(sortCountries);  
+    } else {
+        reset();
+        console.log(sortCountries);
+    }
+    isSorted = !isSorted;
+});
+
+const resetUI = () => {
+    cards.innerHTML = '';
+};
+
 
 const createCards = (country) => {
     const card = document.createElement('div');

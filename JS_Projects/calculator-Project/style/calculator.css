@@ -18,7 +18,7 @@
     background-image: url(../../../TigerImages/calcpic.jpg);
     background-repeat: no-repeat;
     background-position: top left;
-    background-size: 50% 80%;
+    background-size: 50% 60%;
     background-attachment: fixed;
 }
 
@@ -29,8 +29,11 @@
 }
 
 form{
+    display: flex;
     margin: 10px;
     width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 form #calc {
@@ -43,6 +46,7 @@ form #calc {
 
 form label{
 font-size: 1.5rem;
+width: 30%;
 }
 
 footer{
@@ -57,16 +61,16 @@ footer{
 
 #operationSelector {
     font-size: 1rem;
-    width: 40px;
+    width: 40%;
     align-items: center;
     justify-content: center;
 }
 
 footer button{
-    width: 30%;
+    width: 70%;
     margin-left: 20px;
-    height: 20%;
     font-size: 1.5rem;
+    margin: 10px;
 }
 
 @keyframes mymove{
@@ -75,7 +79,7 @@ footer button{
 
 #num1, #num2{
     font-size: 40px;
-    width: 5%;
+    width: 10%;
     border: 2px solid blanchedalmond;
     background-color: #f47424;
 }

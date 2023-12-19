@@ -26,7 +26,7 @@ function checkAnswer() {
                 exAnswer = parseInt(num1.innerHTML) * parseInt(num2.innerHTML);
                 break;
             case '/':
-                    exAnswer = Number(parseInt(num1.innerHTML) / parseInt(num2.innerHTML)).toFixed(2);
+                    exAnswer = Number(parseInt(num1.innerHTML) / parseInt(num2.innerHTML));
                 break;
             case '+':
             default:
@@ -35,7 +35,9 @@ function checkAnswer() {
     
     let userAnswer = +(calc.value);
 
-    if (userAnswer === exAnswer) {
+    const epsilon = 0.01;
+    
+    if (Math.abs(userAnswer - exAnswer) < epsilon)  {
         message.innerHTML = 'Good Work! go to next exc.';
         check.style.backgroundColor = 'green';
         next.style.backgroundColor = 'aqua';
@@ -64,3 +66,4 @@ function resetPage() {
 resetPage();
 
 
+// i face a problem with divide operation, what is thay that is famous to write it

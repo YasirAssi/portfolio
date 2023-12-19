@@ -1,3 +1,6 @@
+import { deleteElement } from "./service/deletElement.js";
+import { storage } from "./service/storage.js";
+
 let elementCreater = () => {
     let div = document.createElement('div');
     div.className = 'div';
@@ -134,39 +137,15 @@ let pageToBuild = (pageBuilderData) => {
     pageBuilderDiv.innerHTML += '';
 }
 
-
-let storage = () => {
-    const pageContent = pageBuilderDiv.innerHTML;
-    localStorage.setItem('savedPage',pageContent);
-    alert('Page saved successfully!');
-}
-
-let deleteElement = () => {
-    const pageBuilderDiv = document.querySelector('.pageBuilderDiv');
-    const element = pageBuilderDiv.children;
-
-    if (element.length === 0) {
-        alert('No elements to delete.');
-        return;
-    }
-    
-const indexToDelete = prompt(`Enter the number (1-${element.length}) of the element to delete:`);
-
-    const index = +indexToDelete;
-    if (isNaN(index) || index < 1 || index > element.length) {
-        alert('Invalid input. Please enter a valid number.');
-        return;
-    }
-
-    const elementToDelete = element[index - 1];
-    pageBuilderDiv.removeChild(elementToDelete);
-}
-
 const savedPageContent = localStorage.getItem('savedPage');
 if (savedPageContent) pageBuilderDiv.innerHTML = savedPageContent;
 
-
 elementCreater();
+
+export {pageBuilderDiv, elementCreater};
+
+
+
 
 
 

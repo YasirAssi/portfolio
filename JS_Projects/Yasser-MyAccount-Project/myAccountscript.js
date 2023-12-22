@@ -6,8 +6,7 @@ let manager = new ActionManager();
 window.addActionToManager = () => { 
     let type = document.getElementById('type').value;
     let description = document.getElementById('description').value;
-    if (type !== 'income' || type !== 'expense') alert('Saving are only allowed on Savings List');
-    else {
+    if (type == 'income' || type == 'expense'){
         if (description == '') alert('Please Enter Discreption');
             else {
                 let amount = +document.getElementById('amount').value;
@@ -19,8 +18,11 @@ window.addActionToManager = () => {
                             document.getElementById('description').value = '';
                             document.getElementById('amount').value = '';
                         }
-            }
-        }    
+            }   
+    } else {
+            alert ('Saving only allowed in Saving List')
+        } 
+            
     }   
     
 window.saveActionToManager = () => {
@@ -33,9 +35,9 @@ window.saveActionToManager = () => {
         if (amount <= 0) {
             alert('Please enter a valid amount.');
         } else {
-            let balance = manager.calcBalance();
+            let currentBalance = manager.calcCurrent();
 
-            if (amount <= balance) {
+            if (amount <= currentBalance) {
                 let savingAction = new Action(saveType, description, amount);
                 manager.addSavingAcion(savingAction);
                 showSavingActionsInTable();

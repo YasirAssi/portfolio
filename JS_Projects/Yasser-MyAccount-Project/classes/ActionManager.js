@@ -60,7 +60,7 @@ export default class ActionManager {
         this.balance = this.actions.reduce((amount, action) => amount + action.amount, 0);
         this.balance -= this.calcSavings();
         let current = document.getElementById('current');
-        current.innerHTML = this.balance > 0 ?  `<p style="color:green;">Current Account: ${this.balance} NIS</p>`: `<p style="color:red;">Current Account: ${this.balance} NIS</p>`;
+        current.innerHTML = this.balance > 0 ?  `<p style="color:green;">Current Balance: ${this.balance} NIS</p>`: `<p style="color:red;">Current Balance: ${this.balance} NIS</p>`;
         return this.balance;
     }
 
@@ -68,7 +68,7 @@ export default class ActionManager {
         this.balance = 0;
         this.balance = this.actions.reduce((amount, action) => amount + action.amount, 0);
         let balance = document.getElementById('balance');
-        balance.innerHTML = this.balance > 0 ?  `<p style="color:green;">Balance (Savings & Current): ${this.balance} NIS</p>`: `<p style="color:red;">Balance (Savings & Current): ${this.balance} NIS</p>`;
+        balance.innerHTML = this.balance > 0 ?  `<p style="color:green;"> Savings & Current Balance: ${this.balance} NIS</p>`: `<p style="color:red;"> Savings & Current Balance: ${this.balance} NIS</p>`;
         return this.balance;
     }
 }

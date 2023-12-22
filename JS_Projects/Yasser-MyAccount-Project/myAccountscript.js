@@ -20,7 +20,7 @@ window.addActionToManager = () => {
                         }
             }   
     } else {
-            alert ('Saving only allowed in Saving List')
+            alert ('Saving is only allowed in the Saving List')
         } 
             
     }   

@@ -6,19 +6,22 @@ let manager = new ActionManager();
 window.addActionToManager = () => { 
     let type = document.getElementById('type').value;
     let description = document.getElementById('description').value;
-    if (description == '') alert('Please Enter Discreption');
-        else {
-            let amount = +document.getElementById('amount').value;
-    if (amount <= 0) alert('Please enter a Valid amount.');
-        else { 
-            let action = new Action (type, description, amount);
-            manager.addAction(action)
-            showActionsInTable();
-            document.getElementById('description').value = '';
-            document.getElementById('amount').value = '';
-        }
-    }
-}    
+    if (type !== 'income' || type !== 'expense') alert('Saving are only allowed on Savings List');
+    else {
+        if (description == '') alert('Please Enter Discreption');
+            else {
+                let amount = +document.getElementById('amount').value;
+                    if (amount <= 0) alert('Please enter a Valid amount.');
+                        else { 
+                            let action = new Action (type, description, amount);
+                            manager.addAction(action)
+                            showActionsInTable();
+                            document.getElementById('description').value = '';
+                            document.getElementById('amount').value = '';
+                        }
+            }
+        }    
+    }   
     
 window.saveActionToManager = () => {
     let saveType = document.getElementById('type').value;

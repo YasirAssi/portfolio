@@ -1,11 +1,12 @@
 export default class ActionManager {
     constructor(){
-        this.actions = localStorage.getItem('actions') ? JSON.parse(localStorage.getItem('actions')):[];
-        this.balance = 0;
         this.savingActions = localStorage.getItem('savingActions') ? JSON.parse(localStorage.getItem('savingActions')):[];
         this.savings = 0; 
+        this.actions = localStorage.getItem('actions') ? JSON.parse(localStorage.getItem('actions')):[];
+        this.balance = 0;
         this.calcBalance();
         this.calcSavings();
+        this.calcCurrent();
     }
 
     addAction(action){
@@ -44,16 +45,6 @@ export default class ActionManager {
         this.calcSavings();
     }
 
-    calcBalance(){
-        this.savings = 
-        this.balance = 0;
-        this.balance = this.actions.reduce((amount, action) => amount + action.amount, 0);
-        this.balance -= this.calcSavings();
-        let balance = document.getElementById('balance');
-        balance.innerHTML = this.balance > 0 ?  `<p style="color:green;">Balance: ${this.balance} NIS</p>`: `<p style="color:red;">Balance: ${this.balance} NIS</p>`;
-        return this.balance;
-    }
-
     calcSavings (){
         this.savings = 0;
         this.savings = this.savingActions.reduce((amount, savingActions) => amount + savingActions.amount, 0);
@@ -62,6 +53,23 @@ export default class ActionManager {
             savings.innerHTML = `<p style="color:orange;">Savings: ${this.savings} NIS</p>`;
         } 
         return this.savings;
+    }
+
+    calcCurrent(){ 
+        this.balance = 0;
+        this.balance = this.actions.reduce((amount, action) => amount + action.amount, 0);
+        this.balance -= this.calcSavings();
+        let current = document.getElementById('current');
+        current.innerHTML = this.balance > 0 ?  `<p style="color:green;">Current Account: ${this.balance} NIS</p>`: `<p style="color:red;">Current Account: ${this.balance} NIS</p>`;
+        return this.balance;
+    }
+
+    calcBalance(){
+        this.balance = 0;
+        this.balance = this.actions.reduce((amount, action) => amount + action.amount, 0);
+        let balance = document.getElementById('balance');
+        balance.innerHTML = this.balance > 0 ?  `<p style="color:green;">Balance (Savings & Current): ${this.balance} NIS</p>`: `<p style="color:red;">Balance (Savings & Current): ${this.balance} NIS</p>`;
+        return this.balance;
     }
 }
 

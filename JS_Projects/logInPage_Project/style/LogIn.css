@@ -13,16 +13,76 @@ body {
     align-items: center;
 }
 
+.navHeader {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    opacity: 1;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border: 2px solid rgb(220, 60, 137);
+}
+
+.navHeader #hamburger ul li a {
+    color:#dc27ae;
+}
+
+.navHeader .navPhoto {
+    height: 90%;
+    width: 10%;
+    overflow: hidden;
+}
+
+#hamburger {
+    font-size: 1.2em;
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+    flex-grow: 0.99;
+    display: flex;
+    align-items: center;
+}
+
+#hamburger #burgerIcon {
+    display: none;
+}
+
+#hamburger ul {
+    font: normal normal 500 15px/10px Heebo;
+    list-style-type: none;
+    display: flex;
+    flex-grow: 0.99;
+    margin-bottom: 0;
+    padding-left: 2rem;
+}
+
+#hamburger ul li a {
+    text-decoration: none;
+    width: 150px;
+    color: #000;
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#hamburger ul li a:hover {
+    font-weight: bolder;
+}
+
 #galleryForm {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgb(5, 5, 131);
+    border: 1px solid rgb(220, 60, 137);
     height: 80vh;
-    max-height: 1000px; 
     padding: 20px; 
-    z-index: 1;
+    margin-top: 20px;
 }
 
 #galleryForm .container {
@@ -62,9 +122,67 @@ body {
     z-index: -1;
 }
 
+.copyRights {
+    display: flex;
+    background: #000;
+    font: normal normal normal 20px/29px Heebo;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    justify-content: space-between;
+    border: 2px solid rgb(220, 60, 137);
+    margin-bottom: 0;
+}
+
 @media (max-width: 768px) {
     #galleryForm {
         width: 100vw;
         height: 100vh; 
+    }
+
+    .navHeader {
+    width: 100%;
+    display: flex;
+    height: 30px;
+    overflow: visible;
+    }
+
+    .navHeader #hamburger {
+        position: relative;
+    }
+
+    .navHeader #hamburger #burgerIcon {
+        display: block;
+    }
+
+    .navHeader #hamburger:hover ul {
+        display: flex;
+    }
+
+    .navHeader #hamburger:hover ul li {
+        margin: 0;
+        padding: 10px 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navHeader #hamburger:hover ul a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .navHeader #hamburger:hover {
+        display: block;
+    }
+
+    .navHeader #hamburger ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #9a7575;
+        opacity: 1;
+        flex-direction: column;
+        width: 50%;
     }
 }

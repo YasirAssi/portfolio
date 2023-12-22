@@ -21,7 +21,7 @@ The project is structured in a user-friendly manner, allowing easy navigation an
 
 Projects Section: To access the landing pages for each project, users can navigate to the projects section (HTML&CSS projects, JS Projects) on the Portfolio page. Here, they can select the project they are interested in.
 
-Landing Pages: Upon selecting a project, users will be directed to the respective landing page. These pages offer a comprehensive overview of the project's details, including descriptions, images and key features.
+Landing Pages: Upon selecting a project, users will be directed to the respective landing page. These pages offer a comprehensive overview of the project's details, including descriptions, images, and key features.
 
 Interactive Buttons: On each landing page, you will find two interactive buttons:
 
@@ -31,6 +31,8 @@ Interactive Buttons: On each landing page, you will find two interactive buttons
 You can explore the landing pages, download project resources, and get in touch with any questions or opportunities for collaboration.
 
 Thank you for visiting my portfolio project!
+
+Link : yasirassi.github.io/portfolio/
 
 
 

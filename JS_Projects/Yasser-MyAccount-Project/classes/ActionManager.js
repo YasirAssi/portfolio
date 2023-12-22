@@ -51,7 +51,6 @@ export default class ActionManager {
         this.balance -= this.calcSavings();
         let balance = document.getElementById('balance');
         balance.innerHTML = this.balance > 0 ?  `<p style="color:green;">Balance: ${this.balance} NIS</p>`: `<p style="color:red;">Balance: ${this.balance} NIS</p>`;
-        // this.balance -= this.calcSavings();
         return this.balance;
     }
 

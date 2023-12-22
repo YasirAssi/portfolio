@@ -19,12 +19,11 @@
         }
         
     #MeImg{
-        height: 90%;
-        width: 20%;    
+        height: 100%;
+        width: 40%;    
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 40px;
         background-image: url(../TigerImages/yasir\ asi.png);
         background-repeat: no-repeat;
         background-position: top left;
@@ -56,8 +55,7 @@
                 font-size: 2rem;
                 text-align: center;
                 display: inline-block; 
-                margin-right: 5px;
-                height: 50%;
+                height: 70%;
                 cursor: pointer;
             }
     }

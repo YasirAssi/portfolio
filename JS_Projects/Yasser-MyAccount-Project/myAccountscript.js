@@ -53,6 +53,9 @@ function showActionsInTable() {
         let tableDataAmount = document.createElement('td');
         tableDataAmount.textContent = `${action.amount} NIS`;
 
+        let tableDataSavings = document.createElement('td');
+        tableDataSavings.textContent = `${action.Savings} NIS`;
+
         let tableDataUpdated = document.createElement('td');
         let updateIcon = document.createElement('i');
         updateIcon.className = 'fa-regular fa-pen-to-square';
@@ -78,5 +81,7 @@ function showActionsInTable() {
 }
 
 showActionsInTable();
+
+
 
 

@@ -1,9 +1,9 @@
-.contactMethods {
+#contactMethods {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    height: 20%;
+    height: 5%;
     background-image: linear-gradient(to bottom, rgba(173, 201, 233, 0.5), rgba(181, 77, 181, 0.5)), url(../TigerImages/aura-icegif-1.gif);
     background-repeat: no-repeat;
     background-position: top left;
@@ -13,19 +13,23 @@
     text-align: center;
     padding: 10px;
 
-    img {
-        max-width: 30%;
-        height: auto;
-    }
+    figure{
+        
+        img {
+            max-width: 30%;
+            height: 10%;
+        }
 
-    figcaption {
-        margin: 5px;
-        padding: 10px;
 
-        &:hover {
-            transform: scale(1.5);
-            transition: all 1s ease-in-out;
-            cursor: pointer;
+        figcaption {
+            margin: 5px;
+            padding: 10px;
+
+            &:hover {
+                transform: scale(1.5);
+                transition: all 1s ease-in-out;
+                cursor: pointer;
+                }
         }
     }
 }

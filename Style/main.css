@@ -36,7 +36,7 @@ a {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  opacity: 0;
+  opacity: 0.4;
   transition: opacity 0.3s ease;
   z-index: 999;
 }
@@ -49,7 +49,7 @@ a {
   cursor: pointer;
 }
 .scroll-arrow .up:hover {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .navHeader {
@@ -127,12 +127,11 @@ a {
   color: aqua;
 }
 #header-container #MeImg {
-  height: 90%;
-  width: 20%;
+  height: 100%;
+  width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
   background-image: url(../TigerImages/yasir\ asi.png);
   background-repeat: no-repeat;
   background-position: top left;
@@ -160,8 +159,7 @@ a {
   font-size: 2rem;
   text-align: center;
   display: inline-block;
-  margin-right: 5px;
-  height: 50%;
+  height: 70%;
   cursor: pointer;
 }
 
@@ -466,12 +464,12 @@ footer form label {
   display: block;
 }
 
-.contactMethods {
+#contactMethods {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  height: 20%;
+  height: 5%;
   background-image: linear-gradient(to bottom, rgba(173, 201, 233, 0.5), rgba(181, 77, 181, 0.5)), url(../TigerImages/aura-icegif-1.gif);
   background-repeat: no-repeat;
   background-position: top left;
@@ -481,15 +479,15 @@ footer form label {
   text-align: center;
   padding: 10px;
 }
-.contactMethods img {
+#contactMethods figure img {
   max-width: 30%;
-  height: auto;
+  height: 10%;
 }
-.contactMethods figcaption {
+#contactMethods figure figcaption {
   margin: 5px;
   padding: 10px;
 }
-.contactMethods figcaption:hover {
+#contactMethods figure figcaption:hover {
   transform: scale(1.5);
   transition: all 1s ease-in-out;
   cursor: pointer;

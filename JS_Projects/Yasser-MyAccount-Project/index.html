@@ -15,38 +15,51 @@
         <div class="alert alert-secondary text-center bg-secondary-subtle mt-2 shadow-lg p-3 mb-5 bg-body-tertiary rounded fs-1 text" role="alert" id="balance">Balance:</div>
         <div class="row">
             <div class="col-md-4 text-bg-secondary p-3 mb-5">
+
                 <select 
-                class="form-select" 
+                class="form-select mb-1" 
                 aria-label="defailt select example" 
                 id="type">
                     <option value="income">Income</option>
                     <option value="expense">Expense</option>
+                </select>
+
+                <select 
+                class="form-select" 
+                aria-label="defailt select example" 
+                id="SaveType">
                     <option value="savings">Savings</option>
                 </select>
-        <div class="form-floating my-3 text-dark">
-            <input type="text"
-            class="form-control" 
-            id="description" 
-            placeholder="Description"
-            maxlength="20">
-            <label for="description">Description</label>
-        </div>
-        <div class="form-floating text-dark">
-            <input type="number" 
-            class="form-control" 
-            id="amount" 
-            placeholder="Amount here">
-            <label for="amount">Amount (NIS)</label>
-        </div>
-            <button type="button" class="btn btn-primary mt-3 w-100" onclick="addActionToManager ()">Add</button>
-        </div>
+
+                <div class="form-floating my-3 text-dark">
+                    <input type="text"
+                    class="form-control" 
+                    id="description" 
+                    placeholder="Description"
+                    maxlength="20">
+                    <label for="description">Description</label>
+                </div>
+
+                <div class="form-floating text-dark">
+                    <input type="number" 
+                    class="form-control" 
+                    id="amount" 
+                    placeholder="Amount here">
+                    <label for="amount">Amount (NIS)</label>
+                </div>
+
+                <button type="button" class="btn btn-primary mt-3 w-100" onclick="addActionToManager ()"> Add </button>
+
+                <button type="button" class="btn btn-warning mt-3 w-100" onclick="saveActionToManager ()"> Money Saving </button>
+
+            </div>
+
         <div class="col-md-8 bg-light shadow-lg p-3 mb-5 bg-body-tertiary rounded p-3">
             <table class="table">
                 <thead>
                     <tr>
-                        <th class="col-md-3 text-primary">Description</th>
-                        <th class="col-md-3 text-primary">Amount (NIS)</th>
-                        <th class="col-md-3 text-primary">Savings (NIS)</th>
+                        <th class="col-md-5 text-primary">Description</th>
+                        <th class="col-md-5 text-primary">Savings (NIS)</th>
                         <th class="col-md-1"></th>
                         <th class="col-md-1"></th>
                     </tr>
@@ -54,7 +67,22 @@
                 <tbody id="actions"></tbody>
         </table>    
         </div>
+        <div class="col-md-8 bg-light shadow-lg p-3 mb-5 bg-body-tertiary rounded p-3">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="col-md-5 text-primary">Description</th>
+                        <th class="col-md-5 text-primary">Savings</th>
+                        <th class="col-md-1"></th>
+                        <th class="col-md-1"></th>
+                    </tr>
+                </thead>
+                <tbody id="SavingActions"></tbody>
+        </table>    
     </div>
 </div>
 </body>
 </html>
+
+
+// according to these JS and Html index, could you provide me a saving method that user choose the option of savings an onclick on money saving the ammount of money shows up in the savingAction ul in condition that the amount of saving is less than the balance

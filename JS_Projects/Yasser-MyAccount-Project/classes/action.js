@@ -3,7 +3,16 @@ export default class Action {
         this.id = Math.floor(Math.random() * 1000);
         this.type = type;
         this.description = description;
-        this.amount = type == "income" ? amount : -amount;
+        if (type == "income") {
+            this.amount = amount;
+        } 
+        else if(type == 'expense') {
+            this.amount = -amount;
+        }
+        else if (type == 'savings') {
+            this.amount = amount;
+        }
+
     }
     get(propaName){
         return this[propaName];
